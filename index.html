@@ -1,0 +1,2607 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>台中縣立青禾國民中學 全球資訊網 - 2003年度存檔</title>
+<!-- ▼ 新增這一行：直接將青禾國中校徽作為標籤頁圖示 -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' shape-rendering='crispEdges'%3E%3Crect x='2' y='2' width='28' height='28' fill='%231a3b6e'/%3E%3Crect x='4' y='4' width='24' height='24' fill='%23f4f1e6'/%3E%3Cpolygon points='16,6 26,16 16,26 6,16' fill='%232e7d32'/%3E%3Crect x='13' y='11' width='6' height='10' fill='%23f4f1e6'/%3E%3Crect x='11' y='14' width='10' height='3' fill='%231a3b6e'/%3E%3C/svg%3E">
+<style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>台中縣立青禾國民中學 全球資訊網 - 2003年度存檔</title>
+<style>
+  /* =========================================================
+     2003年 台灣國中校園網站復古樣式 (IE6 / Windows XP 經典風格)
+     純網頁 ARG 網路調查 / 假網址必經 / DOM修改器真結局版 v9.2
+     ========================================================= */
+  :root {
+    --bg-main: #d8d5c8;
+    --bg-panel: #f4f1e6;
+    --bg-box: #e9e6da;
+    --nav-blue: #1a3b6e;
+    --nav-blue-light: #336699;
+    --warn-red: #990000;
+    --text-dark: #222222;
+    --text-muted: #555555;
+    --border-light: #ffffff;
+    --border-dark: #808080;
+    --border-darker: #404040;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-main);
+    background-image: radial-gradient(#c4c0b0 1px, transparent 1px);
+    background-size: 16px 16px;
+    color: var(--text-dark);
+    font-family: "新細明體", "PMingLiU", "MingLiU", "Noto Serif TC", serif;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: filter 0.6s ease, background-color 1s ease;
+  }
+
+  #crt-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.06) 50%);
+    background-size: 100% 3px;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0.32;
+    transition: opacity 1s ease, box-shadow 1s ease;
+  }
+
+  body.stage-1 #crt-overlay { opacity: 0.32; }
+  body.stage-2 { background-color: #cfcbba; }
+  body.stage-2 #crt-overlay {
+    opacity: 0.48;
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.25);
+  }
+  body.stage-3 {
+    background-color: #a89f91;
+    background-image: radial-gradient(#756860 1px, transparent 1px);
+  }
+  body.stage-3 #crt-overlay {
+    opacity: 0.78;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(55, 0, 0, 0.18) 50%);
+    background-size: 100% 3px;
+    box-shadow: inset 0 0 110px rgba(45, 0, 0, 0.55);
+  }
+  body.stage-3 .panel {
+    box-shadow: 2px 2px 8px rgba(45, 0, 0, 0.35);
+    border-color: #6b5858;
+  }
+  body.stage-4, body.stage-5 {
+    background-color: #968e82;
+    animation: screenGlitch 8s infinite;
+  }
+  body.stage-4 #crt-overlay, body.stage-5 #crt-overlay {
+    opacity: 0.82;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(60, 0, 0, 0.2) 50%);
+    background-size: 100% 3px;
+    box-shadow: inset 0 0 90px rgba(20, 0, 0, 0.5);
+  }
+
+  @keyframes screenGlitch {
+    0%, 93%, 100% { filter: none; }
+    94% { filter: contrast(1.28) brightness(0.9) hue-rotate(-5deg); }
+    96% { filter: invert(0.06) contrast(1.4); }
+    98% { filter: none; }
+  }
+
+  @keyframes violentShake {
+    0% { transform: translate(0, 0) skew(0deg); filter: invert(0); }
+    20% { transform: translate(-8px, 4px) skew(-2deg); filter: invert(0.8) contrast(2); }
+    40% { transform: translate(8px, -6px) skew(3deg); filter: hue-rotate(90deg) contrast(1.8); }
+    60% { transform: translate(-6px, -4px) skew(-1deg); filter: invert(0.9); }
+    80% { transform: translate(6px, 6px) skew(2deg); filter: contrast(2.5) brightness(0.6); }
+    100% { transform: translate(0, 0) skew(0deg); filter: invert(0); }
+  }
+
+  .violent-glitch { animation: violentShake 0.18s infinite !important; }
+
+  .haunted-name {
+    display: inline-block;
+    transition: color 0.2s;
+  }
+  body.stage-2 .haunted-name:hover,
+  body.stage-3 .haunted-name:hover,
+  body.stage-4 .haunted-name:hover,
+  body.stage-5 .haunted-name:hover {
+    color: #990000;
+    font-weight: bold;
+    animation: nameShiver 0.12s infinite;
+  }
+  @keyframes nameShiver {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-1px, 1px); }
+    50% { transform: translate(1px, -1px); }
+    75% { transform: translate(-1px, -1px); }
+    100% { transform: translate(1px, 1px); }
+  }
+
+  .bevel-out {
+    border-top: 2px solid var(--border-light); border-left: 2px solid var(--border-light);
+    border-right: 2px solid var(--border-dark); border-bottom: 2px solid var(--border-dark);
+  }
+  .bevel-in {
+    border-top: 2px solid var(--border-dark); border-left: 2px solid var(--border-dark);
+    border-right: 2px solid var(--border-light); border-bottom: 2px solid var(--border-light);
+  }
+
+  button, .retro-btn {
+    font-family: "新細明體", "PMingLiU", sans-serif; font-size: 13px;
+    background-color: #d4d0c8; color: #000000;
+    border-top: 2px solid #ffffff; border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040; border-bottom: 2px solid #404040;
+    padding: 3px 10px; cursor: pointer;
+  }
+  button:active:not(:disabled), .retro-btn:active:not(:disabled) {
+    border-top: 2px solid #404040; border-left: 2px solid #404040;
+    border-right: 2px solid #ffffff; border-bottom: 2px solid #ffffff;
+    padding: 4px 9px 2px 11px;
+  }
+  button:hover:not(:disabled) { background-color: #dfdcd4; }
+  button:disabled {
+    color: #808080 !important;
+    background-color: #cccccc !important;
+    cursor: not-allowed;
+    text-shadow: 1px 1px 0 #fff;
+  }
+
+  input[type="text"], input[type="password"], textarea, select {
+    font-family: "新細明體", "PMingLiU", monospace; font-size: 13px; background-color: #ffffff;
+    border-top: 2px solid #808080; border-left: 2px solid #808080;
+    border-right: 2px solid #ffffff; border-bottom: 2px solid #ffffff; padding: 3px 5px;
+  }
+
+  /* IE 6.0 模擬工具列與網址列 */
+  #ie-toolbar {
+    background: #d4d0c8;
+    border-bottom: 2px solid #808080;
+    padding: 5px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 12px;
+  }
+  .ie-top-strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    border-bottom: 1px solid #999;
+    padding-bottom: 4px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .ie-address-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .ie-url-input {
+    flex: 1;
+    font-family: "Courier New", monospace !important;
+    font-size: 13px !important;
+    color: #000080;
+    padding: 3px 6px !important;
+  }
+
+  #wrapper { max-width: 1280px; margin: 10px auto; padding: 0 10px; }
+
+  #site-header {
+    background: linear-gradient(90deg, #102a52 0%, #244e8a 65%, #3a6ea5 100%);
+    color: #ffffff; border: 2px solid #0a1b36; margin-bottom: 8px;
+    transition: background 1s ease;
+  }
+  body.stage-3 #site-header {
+    background: linear-gradient(90deg, #16141c 0%, #2b1d24 65%, #3d2222 100%);
+  }
+
+  .header-top { display: flex; align-items: center; padding: 12px 18px; gap: 15px; }
+  .school-emblem {
+    width: 64px; height: 64px; background: #f4f1e6; border: 2px solid #c5b358;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .school-title h1 {
+    margin: 0; font-size: 24px; letter-spacing: 4px; text-shadow: 2px 2px 0px #09172e; font-weight: bold;
+  }
+  .school-title p {
+    margin: 3px 0 0 0; font-size: 12px; font-family: "Courier New", monospace; color: #d0e1f9; letter-spacing: 1px;
+  }
+  .header-meta {
+    margin-left: auto; text-align: right; font-size: 12px; color: #e6eef8; font-family: "細明體", monospace;
+  }
+
+  .marquee-bar {
+    background: #e9e6da; color: #1a3b6e; border-top: 1px solid #808080; padding: 3px 8px; font-size: 13px;
+    display: flex; align-items: center;
+  }
+  .marquee-label {
+    background: #1a3b6e; color: #fff; padding: 1px 6px; font-size: 12px; margin-right: 8px; white-space: nowrap;
+  }
+  .marquee-text { overflow: hidden; white-space: nowrap; width: 100%; }
+  .marquee-inner { display: inline-block; padding-left: 100%; animation: marqueeAnim 35s linear infinite; }
+  @keyframes marqueeAnim { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
+
+  #main-grid { display: grid; grid-template-columns: 210px 1fr 285px; gap: 10px; align-items: start; }
+
+  .panel {
+    background-color: var(--bg-panel); border: 1px solid #7f7c70; box-shadow: 2px 2px 0px rgba(0,0,0,0.15);
+  }
+  .panel-header {
+    background-color: var(--nav-blue); color: #ffffff; font-weight: bold; padding: 5px 10px; font-size: 14px; letter-spacing: 1px;
+    display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #0e2242;
+  }
+  body.stage-3 .panel-header {
+    background-color: #2c1618;
+    border-bottom-color: #140808;
+  }
+
+  .nav-list { list-style: none; margin: 0; padding: 6px; }
+  .nav-item { margin-bottom: 4px; }
+  .nav-btn {
+    width: 100%; text-align: left; padding: 5px 8px; background: #e2dfd3;
+    border-top: 2px solid #ffffff; border-left: 2px solid #ffffff;
+    border-right: 2px solid #7a776c; border-bottom: 2px solid #7a776c;
+    font-size: 13px; color: #102a52; font-weight: bold; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-btn:hover { background: #d2deee; color: #000080; }
+  .nav-btn.active {
+    background: #1a3b6e; color: #ffffff;
+    border-top: 2px solid #0c1d38; border-left: 2px solid #0c1d38;
+    border-right: 2px solid #5c85c4; border-bottom: 2px solid #5c85c4;
+  }
+
+  .counter-box {
+    margin: 6px; padding: 7px; background: #e9e6da; border: 1px inset #999; text-align: center; font-size: 12px;
+  }
+  .led-counter {
+    background: #000000; color: #33ff33; font-family: "Courier New", monospace;
+    font-weight: bold; font-size: 15px; padding: 2px 8px; letter-spacing: 3px; border: 2px inset #666; display: inline-block; margin: 4px 0;
+  }
+
+  #center-content {
+    padding: 15px; min-height: 720px; background-color: #f7f5ec;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.02) 1px, transparent 1px); background-size: 100% 24px;
+    position: relative;
+  }
+
+  .breadcrumb {
+    font-size: 12px; color: #555; border-bottom: 1px dashed #999; padding-bottom: 6px; margin-bottom: 12px;
+    display: flex; justify-content: space-between;
+  }
+  .page-title {
+    font-size: 19px; color: #1a3b6e; border-left: 5px solid #1a3b6e; padding-left: 10px;
+    margin: 0 0 12px 0; background: #eae6d7; padding-top: 4px; padding-bottom: 4px;
+  }
+
+  table.retro-table { width: 100%; border-collapse: collapse; margin: 10px 0; background: #ffffff; font-size: 13px; }
+  table.retro-table th { background: #2b4c7e; color: #ffffff; border: 1px solid #666666; padding: 6px 8px; text-align: left; }
+  table.retro-table td { border: 1px solid #888888; padding: 6px 8px; vertical-align: top; }
+  table.retro-table tr:nth-child(even) td { background: #f4f2ea; }
+  table.retro-table tr:hover td { background: #e6eef8; }
+
+  .doc-link {
+    color: #0000cc; text-decoration: underline; cursor: pointer; display: inline-flex; align-items: center; gap: 5px;
+    font-weight: bold; background: none; border: none; padding: 2px 0; font-size: 13.5px; text-align: left;
+  }
+  .doc-link:hover { color: #990000; background: #fff9d6; }
+  .doc-link.read { color: #551a8b; }
+
+  .warn-box {
+    background: #fdf2f2; border: 1px solid #990000; border-left: 5px solid #990000; color: #7a0000; padding: 10px 12px; margin: 12px 0; font-size: 13px;
+  }
+  .info-box {
+    background: #eef3fa; border: 1px solid #336699; border-left: 5px solid #1a3b6e; color: #102a52; padding: 10px 12px; margin: 12px 0; font-size: 13px;
+  }
+  .form-box {
+    background: #e6e2d3; border: 2px ridge #888888; padding: 14px; margin: 16px 0;
+  }
+  .form-box h4 { margin: 0 0 8px 0; color: #1a3b6e; font-size: 15px; border-bottom: 1px solid #aaa; padding-bottom: 4px; }
+
+  /* 原始碼與假後台 DOM 屬性修改器樣式 */
+  .source-code-box {
+    background: #ffffff;
+    color: #000080;
+    font-family: "Courier New", "細明體", monospace;
+    font-size: 12.5px;
+    line-height: 1.55;
+    padding: 12px;
+    border: 2px inset #808080;
+    white-space: pre-wrap;
+    overflow-x: auto;
+  }
+  .html-comment { color: #008000; font-weight: bold; }
+  .html-ghost-comment { color: #990000; font-weight: bold; background: #fff0f0; }
+
+  .dom-editor-textarea {
+    width: 100%;
+    height: 185px;
+    background: #101820;
+    color: #9cdcfe;
+    font-family: "Courier New", monospace;
+    font-size: 12.5px;
+    line-height: 1.5;
+    padding: 10px;
+    border: 2px inset #555;
+    resize: vertical;
+  }
+
+  #right-panel { font-size: 13px; }
+  .notebook-section { padding: 8px 10px; border-bottom: 1px solid #c5c1b4; }
+  .notebook-title { font-weight: bold; color: #1a3b6e; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center; }
+  .clue-list, .doc-history-list { list-style: none; margin: 0; padding: 0; max-height: 230px; overflow-y: auto; }
+  .clue-item { background: #fffdf5; border: 1px solid #ccc6b4; padding: 5px 7px; margin-bottom: 5px; font-size: 12px; line-height: 1.45; }
+  .clue-item.new-clue { border-left: 3px solid #990000; background: #fff8f6; }
+
+  .sys-log-box {
+    background: #141414; color: #33ff33; font-family: "Courier New", monospace; font-size: 11px;
+    padding: 7px; height: 125px; overflow-y: auto; border: 2px inset #555; line-height: 1.4;
+  }
+  .sys-log-box .err { color: #ff4d4d; }
+  .sys-log-box .warn { color: #ffcc00; }
+
+  #doc-modal-backdrop {
+    display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.55); z-index: 9000; align-items: center; justify-content: center;
+  }
+  #doc-window {
+    width: 730px; max-width: 92vw; max-height: 86vh; background: #d4d0c8;
+    border-top: 2px solid #ffffff; border-left: 2px solid #ffffff; border-right: 2px solid #404040; border-bottom: 2px solid #404040;
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.45); display: flex; flex-direction: column;
+    transition: transform 0.15s ease;
+  }
+  .win-titlebar {
+    background: linear-gradient(90deg, #0a246a, #a6caf0); color: #ffffff; font-weight: bold; padding: 4px 8px;
+    display: flex; justify-content: space-between; align-items: center; font-size: 13px;
+  }
+  .win-close-btn { background: #d4d0c8; color: #000; font-weight: bold; padding: 0 6px; font-size: 12px; line-height: 18px; cursor: pointer; }
+  .win-menubar { background: #d4d0c8; border-bottom: 1px solid #808080; padding: 2px 8px; font-size: 12px; color: #222; display: flex; gap: 14px; }
+  .win-body { background: #fbf9f1; margin: 6px; padding: 18px 22px; border: 2px inset #808080; overflow-y: auto; font-size: 14px; line-height: 1.78; color: #1a1a1a; }
+  .doc-meta-header { border-bottom: 2px double #666; padding-bottom: 8px; margin-bottom: 14px; font-size: 13px; color: #444; background: #f2efe4; padding: 8px 10px; }
+  .win-footer { padding: 6px 10px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; background: #d4d0c8; border-top: 1px solid #fff; }
+
+  #alert-modal-backdrop {
+    display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.45); z-index: 9500; align-items: center; justify-content: center;
+  }
+  #alert-window {
+    width: 440px; max-width: 90vw; background: #d4d0c8; border-top: 2px solid #fff; border-left: 2px solid #fff; border-right: 2px solid #404040; border-bottom: 2px solid #404040; box-shadow: 5px 5px 0px rgba(0,0,0,0.45);
+  }
+  .alert-content { padding: 16px; display: flex; gap: 14px; align-items: flex-start; font-size: 13px; line-height: 1.6; }
+  .alert-icon { width: 34px; height: 34px; background: #1a3b6e; color: #fff; font-weight: bold; font-size: 20px; display: flex; align-items: center; justify-content: center; border: 2px outset #fff; flex-shrink: 0; }
+
+  .cascade-popup {
+    position: fixed;
+    width: 310px;
+    background: #d4d0c8;
+    border: 2px outset #fff;
+    box-shadow: 4px 4px 0 #000;
+    z-index: 9700;
+    font-size: 13px;
+  }
+
+  /* 相片網格（純寫實存檔） */
+  .photo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 12px 0; }
+  .photo-card { background: #fff; border: 1px solid #888; padding: 8px; text-align: center; box-shadow: 2px 2px 0 #ccc; }
+  .retro-photo-frame { position: relative; width: 100%; height: 180px; background: #111; border: 2px inset #666; overflow: hidden; cursor: pointer; }
+  .retro-photo-frame img { width: 100%; height: 100%; object-fit: cover; filter: contrast(1.08) sepia(0.18) saturate(0.88); transition: transform 0.25s ease; }
+  .retro-photo-frame:hover img { transform: scale(1.03); }
+  .photo-timestamp {
+    position: absolute; bottom: 6px; right: 8px; font-family: "Courier New", monospace; font-size: 11px; font-weight: bold; color: #ff8800; text-shadow: 1px 1px 0 #000; letter-spacing: 1px; pointer-events: none;
+  }
+
+  #photo-zoom-backdrop {
+    display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.82); z-index: 9600; align-items: center; justify-content: center;
+  }
+  #photo-zoom-box { background: #d4d0c8; border: 2px outset #fff; padding: 6px; max-width: 90vw; width: 660px; }
+
+  .campus-map-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; }
+  .map-zone-btn { padding: 12px 8px; background: #f4f1e6; border: 2px outset #fff; text-align: center; cursor: pointer; font-weight: bold; color: #1a3b6e; }
+  .map-zone-btn:hover { background: #e1ebf7; }
+
+  .pixel-canvas-box { background: #eeeae0; border: 2px inset #888; padding: 10px; margin: 10px 0; text-align: center; }
+  .seat-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; max-width: 490px; margin: 10px auto; }
+  .seat-cell { background: #ffffff; border: 1px solid #666; padding: 5px 3px; font-size: 12px; text-align: center; }
+  .seat-cell.empty-seat { background: #d8d4c8; color: #666; border: 1px dashed #666; }
+  .seat-cell.ghost-seat { background: #ece8dc; border: 1px dashed #555; color: #444; }
+  body.stage-3 .seat-cell.ghost-seat { background: #f5dada; border: 1px solid #990000; color: #990000; font-weight: bold; }
+
+  .bbs-post { background: #ffffff; border: 1px solid #888; margin-bottom: 10px; }
+  .bbs-header { background: #dce3ee; border-bottom: 1px solid #999; padding: 4px 10px; font-size: 12px; display: flex; justify-content: space-between; color: #102a52; }
+  .bbs-body { padding: 8px 12px; font-size: 13.5px; }
+
+  .creepy-handwriting {
+    font-family: "標楷體", "DFKai-SB", "Noto Serif TC", serif;
+    color: #5c0000; background: #f9efef; border-left: 3px solid #800000; padding: 10px 14px; margin: 10px 0; letter-spacing: 0.5px;
+  }
+
+  @keyframes rowIntrude {
+    0% { background-color: #ffcccc; transform: translateX(-3px); }
+    50% { background-color: #ffe6e6; transform: translateX(3px); }
+    100% { background-color: #fdf0f0; transform: translateX(0); }
+  }
+  .intruder-row td {
+    background-color: #fdf0f0 !important;
+    color: #990000 !important;
+    font-weight: bold;
+    border-color: #990000 !important;
+    animation: rowIntrude 0.25s ease-in-out 2;
+  }
+
+  #ending-overlay {
+    display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: 9900; overflow-y: auto; padding: 30px 20px; transition: background 1.5s ease;
+  }
+  #ending-overlay.ending-bad { background: radial-gradient(circle at center, #1a0000 0%, #000000 85%); color: #e6dcdc; }
+  .bad-ending-box {
+    max-width: 760px; margin: 10px auto; border: 2px solid #660000; background: rgba(12, 2, 2, 0.94);
+    padding: 32px; line-height: 1.95; box-shadow: 0 0 40px rgba(180, 0, 0, 0.35); position: relative;
+  }
+  .bad-glitch-title {
+    color: #ff2a2a; font-size: 24px; letter-spacing: 3px; text-shadow: 2px 0 #00ffff, -2px 0 #ff0000;
+    border-bottom: 1px solid #660000; padding-bottom: 12px; margin-top: 0;
+  }
+  .ghost-whisper-wall {
+    margin: 18px 0; padding: 14px; background: #090000; border: 1px dashed #800000;
+    font-family: "標楷體", serif; color: #ff4d4d; font-size: 15px; line-height: 1.8;
+  }
+
+  #ending-overlay.ending-true { background: linear-gradient(180deg, #1b2838 0%, #2c3e50 45%, #d6c7a9 100%); color: #1f1f1f; }
+  .true-ending-box {
+    max-width: 780px; margin: 10px auto; border: 2px solid #c5b358; background: #fbf8ef;
+    padding: 34px; line-height: 1.95; box-shadow: 0 12px 45px rgba(0, 0, 0, 0.55);
+  }
+  .true-ending-title {
+    color: #1a3b6e; font-size: 24px; letter-spacing: 2px; border-bottom: 2px double #1a3b6e; padding-bottom: 12px; margin-top: 0;
+  }
+  .roll-call-receipt {
+    background: #fff; border: 1px solid #999; padding: 16px 20px; margin: 18px 0;
+    font-family: "Courier New", "新細明體", monospace; box-shadow: 3px 3px 0 #ccc;
+  }
+  .fade-in-line { opacity: 0; transform: translateY(8px); animation: lineAppear 0.9s forwards; }
+  @keyframes lineAppear { to { opacity: 1; transform: translateY(0); } }
+
+  footer#site-footer { text-align: center; font-size: 12px; color: #555; margin: 14px 0 24px 0; padding-top: 8px; border-top: 1px solid #aaa; }
+</style>
+</head>
+<body class="stage-1">
+
+<div id="crt-overlay"></div>
+
+<!-- 模擬 IE 6.0 網址列與原始碼 / 假後台 DOM 修改器工具列 -->
+<div id="ie-toolbar">
+  <div class="ie-top-strip">
+    <div>
+      <span style="background:#1a3b6e; color:#fff; padding:1px 6px; font-weight:bold; margin-right:6px;">WEB ARCHIVE</span>
+      <span>正在瀏覽歷史庫存網頁快照（最後備份時間：2004/02/14 03:12:09）</span>
+    </div>
+    <div style="display:flex; gap:6px; flex-wrap:wrap;">
+      <button onclick="viewPageSource()" style="font-size:12px; padding:1px 8px;">檢視網頁原始碼 (View Source)</button>
+      <button onclick="openDomConsole()" style="font-size:12px; padding:1px 8px; font-weight:bold; color:#102a52;">網頁除錯控制台 / DOM 屬性修改器</button>
+      <button onclick="confirmResetGame()" style="font-size:12px; padding:1px 8px;">清除快取 / 重置</button>
+    </div>
+  </div>
+  <div class="ie-address-row">
+    <span style="font-weight:bold; color:#333;">網址(D)：</span>
+    <input type="text" id="ie-url-bar" class="ie-url-input" value="http://www.chjh.tcc.edu.tw/2003_backup/index.asp" onkeydown="if(event.key==='Enter') navigateByUrl()">
+    <button onclick="navigateByUrl()" style="padding:2px 10px;">移至</button>
+  </div>
+</div>
+
+<div id="wrapper">
+  <header id="site-header">
+    <div class="header-top">
+      <div class="school-emblem" title="台中縣立青禾國民中學校徽">
+        <svg width="52" height="52" viewBox="0 0 32 32" shape-rendering="crispEdges">
+          <rect x="2" y="2" width="28" height="28" fill="#1a3b6e"/>
+          <rect x="4" y="4" width="24" height="24" fill="#f4f1e6"/>
+          <polygon points="16,6 26,16 16,26 6,16" fill="#2e7d32"/>
+          <rect x="13" y="11" width="6" height="10" fill="#f4f1e6"/>
+          <rect x="11" y="14" width="10" height="3" fill="#1a3b6e"/>
+        </svg>
+      </div>
+      <div class="school-title">
+        <h1 class="glitch-target">台中縣立青禾國民中學</h1>
+        <p>CHING-HO JUNIOR HIGH SCHOOL // 誠實‧勤學‧守禮‧創新</p>
+      </div>
+      <div class="header-meta">
+        <div>系統日期：<span id="header-sys-date">中華民國 92 年 11 月 12 日</span></div>
+        <div>最佳瀏覽解析度：800x600 / IE 6.0</div>
+        <div id="header-conn-status" style="color:#a8ff9e;">● 伺服器狀態：一般唯讀存檔</div>
+      </div>
+    </div>
+    <div class="marquee-bar">
+      <span class="marquee-label">校園快訊</span>
+      <div class="marquee-text">
+        <div class="marquee-inner" id="marquee-content">
+          ★ 歡迎光臨青禾國中全球資訊網！ ★ 92學年度第一學期第二次段考將於11月26日舉行，請同學提早準備。 ★ 圖書室新進一批文學與科普圖書，歡迎多加借閱。 ★ 資訊組提醒：本校舊版網頁存檔僅供校內行政與教學查閱使用。
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="main-grid">
+    <!-- 左欄：網站導覽列 -->
+    <aside class="panel">
+      <div class="panel-header"><span>:: 網站導覽列 ::</span></div>
+      <ul class="nav-list" id="nav-menu">
+        <li class="nav-item"><button class="nav-btn active" data-page="home" onclick="navigateTo('home')"><span>學校首頁</span></button></li>
+        <li class="nav-item"><button class="nav-btn" data-page="announcements" onclick="navigateTo('announcements')"><span>校園行政公告</span></button></li>
+        <li class="nav-item"><button class="nav-btn" data-page="campus_map" onclick="navigateTo('campus_map')"><span>校園導覽與處室</span></button></li>
+        <li class="nav-item"><button class="nav-btn" data-page="school_news" onclick="navigateTo('school_news')"><span>青禾青年通訊</span></button></li>
+        <li class="nav-item"><button class="nav-btn" data-page="class203" onclick="navigateTo('class203')"><span>班級網頁 (203)</span></button></li>
+        <li class="nav-item"><button class="nav-btn" data-page="essays" onclick="navigateTo('essays')"><span>學生藝文園地</span></button></li>
+        <li class="nav-item"><button class="nav-btn" data-page="gallery" onclick="navigateTo('gallery')"><span>活動剪影相簿</span></button></li>
+        <li class="nav-item"><button class="nav-btn" data-page="library_sys" onclick="navigateTo('library_sys')"><span>圖書室館藏查詢</span></button></li>
+        <li class="nav-item"><button class="nav-btn" data-page="health_center" onclick="navigateTo('health_center')"><span>學務處與健康中心</span></button></li>
+        <li class="nav-item"><button class="nav-btn" data-page="guestbook" onclick="navigateTo('guestbook')"><span>青禾師生留言板</span></button></li>
+        <li class="nav-item"><button class="nav-btn" data-page="roster" onclick="navigateTo('roster')"><span>學生學籍查詢</span></button></li>
+        <li class="nav-item"><button class="nav-btn" data-page="teachers" onclick="navigateTo('teachers')"><span>教職員工資料</span></button></li>
+        <li class="nav-item"><button class="nav-btn" data-page="admin" onclick="navigateTo('admin')"><span>網站管理區</span></button></li>
+      </ul>
+
+      <div class="counter-box">
+        <div id="visitor-prefix">您是第</div>
+        <div class="led-counter" id="visitor-counter">004819</div>
+        <div id="visitor-suffix">位訪客</div>
+        <div style="margin-top:6px; font-size:11px; color:#666;">
+          網站維護：資訊組 周文傑<br>E-mail: admin@chjh.tcc.edu.tw
+        </div>
+      </div>
+
+      <div style="padding:8px; border-top:1px solid #bbb; background:#e5e2d5;">
+        <div style="font-weight:bold; font-size:12px; color:#1a3b6e; margin-bottom:4px;">站內文件全文檢索</div>
+        <div style="display:flex; gap:3px;">
+          <input type="text" id="global-search-input" placeholder="輸入關鍵字" style="width:100%; font-size:12px;" onkeydown="if(event.key==='Enter') runGlobalSearch()">
+          <button onclick="runGlobalSearch()" style="padding:2px 6px; font-size:12px; white-space:nowrap;">搜尋</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 中欄：主要瀏覽區 -->
+    <main class="panel" id="center-content"></main>
+
+    <!-- 右欄：純筆記與系統日誌 -->
+    <aside class="panel" id="right-panel">
+      <div class="panel-header">
+        <span>備忘剪貼簿</span>
+        <span id="save-indicator" style="font-size:11px; font-weight:normal; color:#a8ff9e;">已同步</span>
+      </div>
+
+      <div class="notebook-section">
+        <div class="notebook-title">
+          <span>記下的異常細節 (<span id="clue-count">0</span>)</span>
+        </div>
+        <ul class="clue-list" id="ui-clue-list">
+          <li class="clue-item" style="color:#666;">（尚無紀錄）</li>
+        </ul>
+      </div>
+
+      <div class="notebook-section">
+        <div class="notebook-title">
+          <span>已開啟檔案 (<span id="doc-count">0</span>)</span>
+        </div>
+        <ul class="doc-history-list" id="ui-doc-list">
+          <li class="clue-item" style="color:#666;">（尚無紀錄）</li>
+        </ul>
+      </div>
+
+      <div class="notebook-section" style="border-bottom:none;">
+        <div class="notebook-title">
+          <span>系統底層日誌</span>
+        </div>
+        <div class="sys-log-box" id="ui-sys-log">
+          <div>[INIT] 載入 2003 年歷史網頁快照成功。</div>
+          <div>[INFO] 正在唯讀模式下瀏覽靜態存檔。</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer id="site-footer">
+    台中縣立青禾國民中學 版權所有 © 2003 Ching-Ho Junior High School. All Rights Reserved.<br>
+    地址：台中縣青禾鄉學府路一段108號 ｜ 電話：(04) 2568-XXXX ｜ 本站資料僅供校內教學與行政存檔使用
+  </footer>
+</div>
+
+<!-- 彈出式文件 / 原始碼 / DOM 修改器檢視視窗 -->
+<div id="doc-modal-backdrop" onclick="if(event.target===this) attemptCloseDocModal()">
+  <div id="doc-window">
+    <div class="win-titlebar">
+      <span id="doc-win-title">文件檢視器</span>
+      <button class="win-close-btn" id="doc-close-btn" onclick="attemptCloseDocModal()">✕</button>
+    </div>
+    <div class="win-menubar">
+      <span>檔案(F)</span> <span>編輯(E)</span> <span>檢視(V)</span> <span>工具(T)</span>
+      <span style="margin-left:auto; color:#555;" id="doc-win-code">ENCODING: BIG5</span>
+    </div>
+    <div class="win-body" id="doc-win-body"></div>
+    <div class="win-footer">
+      <span id="doc-win-status">狀態：唯讀存檔文件</span>
+      <button onclick="attemptCloseDocModal()">關閉視窗</button>
+    </div>
+  </div>
+</div>
+
+<!-- 舊式警告對話框 -->
+<div id="alert-modal-backdrop" onclick="if(event.target===this) closeAlertModal()">
+  <div id="alert-window">
+    <div class="win-titlebar">
+      <span id="alert-title">系統提示訊息</span>
+      <button class="win-close-btn" onclick="closeAlertModal()">✕</button>
+    </div>
+    <div class="alert-content">
+      <div class="alert-icon" id="alert-icon">i</div>
+      <div id="alert-message" style="flex:1;">訊息內容</div>
+    </div>
+    <div style="padding:0 16px 14px 16px; text-align:center;">
+      <button onclick="closeAlertModal()" style="min-width:80px;">確定</button>
+    </div>
+  </div>
+</div>
+
+<!-- 照片放大檢視視窗 -->
+<div id="photo-zoom-backdrop" onclick="if(event.target===this) closePhotoZoom()">
+  <div id="photo-zoom-box">
+    <div class="win-titlebar">
+      <span id="photo-zoom-title">相片檢視器</span>
+      <button class="win-close-btn" onclick="closePhotoZoom()">✕</button>
+    </div>
+    <div style="padding:10px; background:#f4f1e6; text-align:center;">
+      <div style="position:relative; display:inline-block; max-width:100%;">
+        <img id="photo-zoom-img" src="" alt="" style="max-width:100%; max-height:420px; border:2px inset #666; filter:contrast(1.08) sepia(0.18);">
+        <div id="photo-zoom-ts" class="photo-timestamp" style="font-size:13px; bottom:10px; right:12px;"></div>
+      </div>
+      <div id="photo-zoom-caption" style="text-align:left; margin-top:10px; padding:8px; background:#fff; border:1px solid #999; font-size:13px;"></div>
+    </div>
+  </div>
+</div>
+<!-- 林以安的紅色警告彈窗（Windows XP / IE6 經典立體對話框風格） -->
+<div id="lin-plea-backdrop" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.45); z-index:9850; align-items:center; justify-content:center;">
+  <div style="width:450px; max-width:90vw; background:#d4d0c8; border-top:2px solid #ffffff; border-left:2px solid #ffffff; border-right:2px solid #404040; border-bottom:2px solid #404040; box-shadow:5px 5px 0px rgba(0,0,0,0.45);">
+    
+    <!-- 經典暗紅漸層標題列 -->
+    <div class="win-titlebar" style="background:linear-gradient(90deg, #6b0000, #c43b3b);">
+      <span>系統核心警告 - 0x2032</span>
+      <button class="win-close-btn" onclick="abortFormatAndShowHint()" title="放棄格式化">✕</button>
+    </div>
+
+    <!-- 對話框內容區 -->
+    <div style="padding:16px; display:flex; gap:14px; align-items:flex-start;">
+      <!-- 復古紅底立體警告圖示 -->
+      <div style="width:34px; height:34px; background:#990000; color:#ffffff; font-weight:bold; font-size:20px; display:flex; align-items:center; justify-content:center; border-top:2px solid #ffffff; border-left:2px solid #ffffff; border-right:2px solid #404040; border-bottom:2px solid #404040; flex-shrink:0;">
+        !
+      </div>
+      
+      <!-- 內凹文字框 + 林以安紅色求饒文字 -->
+      <div style="flex:1; background:#fbf9f1; border-top:2px solid #808080; border-left:2px solid #808080; border-right:2px solid #ffffff; border-bottom:2px solid #ffffff; padding:12px 14px;">
+        <div style="color:#990000; font-family:'標楷體', 'DFKai-SB', 'Noto Serif TC', serif; font-size:18px; font-weight:bold; line-height:1.65; letter-spacing:0.5px;">
+          拜託你不要這樣做 求求你求求你求求你求求你求求你求求你求求你求求你求求你
+        </div>
+      </div>
+    </div>
+
+    <!-- 下方復古立體按鈕列 -->
+    <div style="padding:0 16px 14px 16px; display:flex; justify-content:center; gap:14px;">
+      <button onclick="confirmFormatBadEnding()" style="min-width:110px; color:#800000; font-weight:bold;">繼續格式化</button>
+      <button onclick="abortFormatAndShowHint()" style="min-width:130px; font-weight:bold;">放棄格式化並返回</button>
+    </div>
+
+  </div>
+</div>
+<!-- 結局顯示畫面 -->
+<div id="ending-overlay"><div id="ending-content"></div></div>
+
+<script>
+/* ============================================================================
+   《第七次點名》THE SEVENTH ATTENDANCE — 純校園網站 ARG 調查版 v9.2
+   ============================================================================ */
+
+const CUSTOM_PHOTOS = {
+  opening: "操場.jpg",
+  classroom: "桌子.jpg",
+  basement: "地下室.jpg",
+  art_cabinet: "素描.jpg"
+};
+
+function getRealTimestamp() {
+  const now = new Date();
+  const y = now.getFullYear();
+  const m = String(now.getMonth() + 1).padStart(2, "0");
+  const d = String(now.getDate()).padStart(2, "0");
+  const hh = String(now.getHours()).padStart(2, "0");
+  const mm = String(now.getMinutes()).padStart(2, "0");
+  const ss = String(now.getSeconds()).padStart(2, "0");
+  return `${y}/${m}/${d} ${hh}:${mm}:${ss}`;
+}
+
+const RetroAudio = {
+  ctx: null,
+  init() {
+    if (!this.ctx) {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (AudioContext) this.ctx = new AudioContext();
+    }
+    if (this.ctx && this.ctx.state === "suspended") this.ctx.resume();
+  },
+  playBeep(freq = 880, duration = 0.08, type = "square", vol = 0.04) {
+    try {
+      this.init();
+      if (!this.ctx) return;
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc.type = type;
+      osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
+      gain.gain.setValueAtTime(vol, this.ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + duration);
+      osc.connect(gain); gain.connect(this.ctx.destination);
+      osc.start(); osc.stop(this.ctx.currentTime + duration);
+    } catch (e) {}
+  },
+  playCreepyWhisperTone() {
+    try {
+      this.init();
+      if (!this.ctx) return;
+      const now = this.ctx.currentTime;
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(110, now);
+      osc.frequency.linearRampToValueAtTime(64, now + 1.3);
+      gain.gain.setValueAtTime(0.06, now);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + 1.4);
+      osc.connect(gain); gain.connect(this.ctx.destination);
+      osc.start(now); osc.stop(now + 1.4);
+    } catch (e) {}
+  },
+  playBadEndingSound() {
+    try {
+      this.init();
+      if (!this.ctx) return;
+      const now = this.ctx.currentTime;
+      const osc1 = this.ctx.createOscillator();
+      const osc2 = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc1.type = "sawtooth"; osc2.type = "square";
+      osc1.frequency.setValueAtTime(55, now); osc1.frequency.linearRampToValueAtTime(32, now + 2.5);
+      osc2.frequency.setValueAtTime(1420, now); osc2.frequency.exponentialRampToValueAtTime(110, now + 2.5);
+      gain.gain.setValueAtTime(0.12, now); gain.gain.exponentialRampToValueAtTime(0.001, now + 2.8);
+      osc1.connect(gain); osc2.connect(gain); gain.connect(this.ctx.destination);
+      osc1.start(now); osc2.start(now); osc1.stop(now + 2.8); osc2.stop(now + 2.8);
+    } catch (e) {}
+  },
+  playSchoolChime() {
+    try {
+      this.init();
+      if (!this.ctx) return;
+      const notes = [523.25, 659.25, 587.33, 392.00];
+      notes.forEach((freq, idx) => {
+        const start = this.ctx.currentTime + idx * 0.55;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = "sine"; osc.frequency.setValueAtTime(freq, start);
+        gain.gain.setValueAtTime(0.09, start); gain.gain.exponentialRampToValueAtTime(0.0001, start + 0.9);
+        osc.connect(gain); gain.connect(this.ctx.destination);
+        osc.start(start); osc.stop(start + 0.9);
+      });
+    } catch (e) {}
+  }
+};
+
+function wrapName(text) {
+  return text.replace(/林以安/g, `<span class="haunted-name">林以安</span>`);
+}
+
+// ============================================================================
+// 1. 檔案資料庫（嚴格階段鎖定 + 假網址提示公文 + DOM修改器教學文件）
+// ============================================================================
+const DOCUMENTS = {
+  // --- Stage 1：公開日常檔案 ---
+  "midterm_notice": {
+    id: "midterm_notice", filename: "92上_第一次定期評量日程表.doc", title: "92學年度第一學期第一次定期評量公告",
+    author: "教務處教學組", date: "2003/10/05", category: "校園行政公告", minStage: 1,
+    content: `<p><strong>公告事項：</strong>本學期第一次定期評量訂於 10 月 22、23 日舉行。請各班級依考試場地配置圖準時入座。另查近期部分教室課桌椅盤點數量有異，請各班總務股長於 10/14 前完成班級財產清點。</p>`
+  },
+  "dir_migration_notice": {
+    id: "dir_migration_notice", filename: "資訊組_網站目錄遷移與舊檔歸檔公告_9210.doc", title: "資訊組公告：舊版網頁目錄遷移與伺服器暫存路徑說明",
+    author: "資訊組 周文傑", date: "2003/10/18", category: "校園行政公告", minStage: 1,
+    content: `
+      <p><strong>主旨：</strong>配合教務處清查 92 學年度上學期網站空間，部分已撤下首頁連結之舊文章與班級隨筆暫存檔，已統一歸檔至伺服器保留目錄。</p>
+      <p><strong>調閱方式：</strong>為避免一般訪客誤入，該目錄已關閉首頁超連結清單。各處室或導師若需調閱未公開之舊檔，請直接在瀏覽器上方網址列輸入完整路徑：<br>
+      <code>http://www.chjh.tcc.edu.tw/2003_backup/temp_old/</code> 並按下「移至」即可瀏覽目錄清單。</p>
+    `,
+    onReadClue: { id: "clue_dir_notice", text: "【目錄遷移公告】已撤下首頁連結的舊檔移至伺服器保留目錄 /2003_backup/temp_old/，需在網址列手動輸入路徑進入。" }
+  },
+  "lunch_menu": {
+    id: "lunch_menu", filename: "10月份營養午餐菜單.doc", title: "92學年度10月份全校營養午餐菜單與熱量表",
+    author: "學務處衛生組", date: "2003/09/28", category: "校園行政公告", minStage: 1,
+    content: `<p><strong>10月17日（五）菜單：</strong>主食：肉燥飯、配菜：炒青菜、蘿蔔貢丸湯、季節水果（香蕉）。<br>供餐時間：中午 12:00 至 12:30。下午放學時間為 16:10（全校大掃除與降旗典禮至 16:17）。</p>`
+  },
+  "school_news_vol12": {
+    id: "school_news_vol12", filename: "青禾青年_第48期.doc", title: "青禾青年校園通訊 第48期（校園專欄）",
+    author: "青禾青年編輯社", date: "2003/10/10", category: "青禾青年通訊", minStage: 1,
+    content: `<p><strong>【校園專題：尋找校園裡的風景】</strong><br>本期校園寫生比賽圓滿結束。美術老師黃美惠指出，今年學生的作品中，有一幅描繪「午後空教室窗邊」的鉛筆素描令人驚艷，雖然作者未具名僅寫了班級座號代碼，但其捕捉光影的細膩度超越往年水準，已暫時收存於美術教室教具櫃中。</p>`
+  },
+  "art_club_award": {
+    id: "art_club_award", filename: "92上_校內寫生比賽得獎名單.doc", title: "學務處訓育組：92學年度全校校園寫生比賽評審紀錄",
+    author: "美術科 黃美惠老師", date: "2003/10/08", category: "青禾青年通訊", minStage: 1,
+    content: `<p>本年度校園寫生比賽共收到各年級作品 142 件。<br>另有一件未具名之鉛筆素描稿（背面僅用鉛筆寫著代碼 <code>203-32</code>，左下角標註畫紙購買日期與作者生日 <code>08/14</code>），描繪「午後空教室的窗邊課桌椅與前排同學的背影」，因核對二年三班並無 32 號學生，依簡章規定不予列入正式得獎名冊。</p>`,
+    onReadClue: { id: "clue_art_contest", text: "【寫生比賽】無名素描背面寫著「203-32」與「08/14」，但二年三班在籍名冊只有 31 人。" }
+  },
+  "library_log": {
+    id: "library_log", filename: "圖書室借閱異常清單_9210.txt", title: "青禾國中圖書室 條碼機離線借閱紀錄",
+    author: "圖書室管理員 趙淑貞", date: "2003/10/12", category: "圖書室館藏查詢", minStage: 1,
+    content: `<p><strong>[條碼系統異常備註]</strong><br>10月份整理書架時，發現繪本區《被遺忘的角落》（館藏索書號：<code>857.7 / 4021</code>）與《如何交到好朋友》（索書號：<code>177.2 / 1105</code>）兩本書遭人借出，借閱登記卡手寫欄留有借書證號 <strong>2032</strong>，借閱日期為 <strong>92/09/12</strong>。<br>但將該證號輸入館藏電腦查詢時，系統顯示「無此借書證號」，該兩本書至今未歸還。</p>`,
+    onReadClue: { id: "clue_library_2032", text: "【圖書室】不存在於系統的證號「2032」於 9/12 借走了《被遺忘的角落》與《如何交到好朋友》。" }
+  },
+  "class_diary_0915": {
+    id: "class_diary_0915", filename: "92上_二年三班週記精選.doc", title: "學生園地：開學第一個月的感想",
+    author: "許佳蓉（二年三班 / 31號）", date: "2003/10/02", category: "學生藝文園地", minStage: 1,
+    content: `
+      <p>  升上二年級之後，我是班上最後一號（31號），每次發考卷都要等最久。</p>
+      <p id="morph-para-diary">  開學前兩週，我總覺得教室後面靠窗那個空位好像有一個人影，有時候我水彩打翻、或是橡皮擦掉到地上找不到時，桌腳旁邊就會莫名其妙多出一塊全新的橡皮擦，上面用奇異筆寫著很小的「以安」。那時候我還以為是隔壁班同學惡作劇。可是從九月下旬開始，那個位子就再也沒有動靜了——直到這禮拜午休，我又聽到後面傳來鉛筆沙沙沙畫圖的聲音，回頭看卻只有一張空椅子。</p>
+    `,
+    onReadClue: { id: "clue_jiarong_diary", text: "【許佳蓉週記】31號許佳蓉提到靠窗空位旁常出現寫著「以安」的新橡皮擦，9月下旬後沒了動靜，最近午休空椅子旁又傳出畫圖聲。" }
+  },
+
+  // --- Stage 2：必須在學籍系統撈出 2032 並切換網址進入 /temp_old/ 才能取得 ---
+  "my_seat": {
+    id: "my_seat", filename: "我的座位.doc", title: "二年三班優良作文選：我的座位",
+    author: "林以安（二年三班 / 學號：2032）", date: "2003/09/15", category: "未公開存檔 (/temp_old/)", minStage: 2,
+    requiresTempDir: true,
+    content: `
+      <p>  轉學來到青禾國中已經兩個星期了。我的座位在二年三班教室的<strong>最後一排，靠窗戶的角落</strong>，旁邊就是放掃把和拖把的清潔櫃。</p>
+      <p id="morph-para-seat">  外婆走之前跟我說，到了新學校要多笑、要主動幫同學的忙，這樣大家就會喜歡我。所以我每天早上都提早二十分鐘到教室，偷偷把黑板擦乾淨、把講台上的粉筆排整齊，還在書包裡放了幾塊存零用錢買的乾淨橡皮擦，想著如果前排的許佳蓉或張家瑋忘記帶文具，我就可以借給他們。</p>
+      <p>  可是每天早上第一節課點名的時候，陳志明老師從 1 號唸到 31 號，唸完 31 號的許佳蓉之後，就會把點名簿合起來。<strong>我是 32 號。老師每次都忘記唸到我。</strong></p>
+      <p>  昨天放學前，我偷偷在點名簿最後一頁的空白處，用鉛筆把自己的名字和學號 <strong>2032</strong> 寫上去了。我還把全班 31 個同學的背影都畫在藍色素描本裡……</p>
+    `,
+    onReadClue: { id: "clue_2032", text: "【作文《我的座位》】林以安是 203 班第 32 號，每天早到擦黑板、準備橡皮擦，卻因名冊漏列每天點名都被跳過。" }
+  },
+  "teacher_memo_0925": {
+    id: "teacher_memo_0925", filename: "導師隨筆_20030925.txt", title: "二年三班導師個人日誌（92/09/25）",
+    author: "陳志明 老師", date: "2003/09/25 17:10", category: "未公開存檔 (/temp_old/)", minStage: 2,
+    requiresTempDir: true,
+    content: `
+      <p>92年9月25日 晴</p>
+      <p>帶二年三班滿一個月了。全班 31 個人都很乖巧。唯一奇怪的是教室最後一排靠窗的角落，總務處開學時多放了一套舊課桌椅在那裡（財產編號 <code>DESK-92-203B</code>）。這陣子偶爾覺得眼角餘光好像瞄到那邊坐著一個瘦瘦的男生，低著頭在畫畫，但每次轉頭過去看，那裡明明就是空的。大概是最近改作文改太晚產生的視覺殘影吧。</p>
+    `,
+    onReadClue: { id: "clue_teacher_phase1", text: "【導師日誌 9/25】陳志明以為班上只有 31 人，提到多出來的課桌椅財產編號為 DESK-92-203B。" }
+  },
+
+  // --- Stage 3：必須先讀過 /temp_old/ 並查詢總務處財產編號 DESK-92-203B 後解鎖 ---
+  "basement_inventory": {
+    id: "basement_inventory", filename: "總務處財產移轉單_921014.doc", title: "總務處庶務組 教室課桌椅報廢與封存清冊",
+    author: "總務處 庶務組", date: "2003/10/14", category: "總務處財產系統", minStage: 3,
+    content: `
+      <p><strong>移轉事由：</strong>二年三班導師陳志明申請移除教室後方多餘之舊型木製課桌椅一套（財產編號：<code>DESK-92-203B</code>）。<br>
+      <strong>搬遷日期：</strong>民國 92 年 10 月 14 日午休時間，由工友協助搬運至教學大樓地下室舊器材儲藏室封存。<br>
+      <strong>工友現場備註：</strong>搬動桌子時，抽屜裡掉出一本藍色封面的素描本，全本畫滿二年三班同學的背影，已轉交給陳志明老師保管。另桌面上有被美工刀反覆刻畫又塗改的數字「203-32」，工友反映搬運時桌子沉重得像坐了一個人。</p>
+    `,
+    onReadClue: { id: "clue_basement_desk", text: "【財產移轉單】10/14 將編號 DESK-92-203B 課桌椅搬至地下室封存，工友說桌子沉重得像坐了一個人。" }
+  },
+  "student_report_1013": {
+    id: "student_report_1013", filename: "輔導室談話紀錄_203班.doc", title: "學生心理輔導與班級異常反應紀錄",
+    author: "輔導室 / 轉交導師陳志明", date: "2003/10/13", category: "輔導室內部存檔", minStage: 3,
+    content: `
+      <p><strong>反映學生：</strong>二年三班 許佳蓉（31號）、張家瑋（14號）<br>
+      今日早自習結束後，兩名學生臉色發白地衝進輔導室，哭著說坐在最後一排靠窗空位旁邊時，清楚聽到「有人在翻紙的聲音」，甚至看到空椅子上有一個穿著舊白襯衫的透明人影正在低頭畫畫。全班轉頭看時，桌上只剩下一本自己翻頁的素描本。</p>
+    `,
+    onReadClue: { id: "clue_1013_seat", text: "【輔導紀錄 10/13】學生在空椅子上看見穿舊白襯衫的半透明人影正在低頭畫畫。" }
+  },
+  "teacher_memo_1010": {
+    id: "teacher_memo_1010", filename: "導師日誌_20031010_抹不掉的字.txt", title: "二年三班導師個人備忘錄（92/10/10）",
+    author: "陳志明 老師", date: "2003/10/10 23:45", category: "教職員工資料", minStage: 3,
+    content: `
+      <p>92年10月10日 深夜</p>
+      <p>這不是殘影。這間教室真的不乾淨！</p>
+      <p>今晚我把紙本點名簿帶回家核對，翻到最後一頁時，第 31 號許佳蓉的下面，赫然多出了一行字：<strong>32 ｜ 2032 ｜ 林以安</strong>。</p>
+      <p>我嚇得拿立可白去塗、拿美工刀去刮，甚至把那一頁紙都刮破了——可是只要我一眨眼，那三個字就像從紙背滲出來的血絲一樣，完好無損地浮在格子裡！更可怕的是，<strong>那行字的筆跡跟我自己親手寫的一模一樣！</strong></p>
+    `,
+    onReadClue: { id: "clue_1010_roll", text: "【導師日誌 10/10】點名簿用陳老師自己的筆跡浮現「32 林以安」，用立可白和美工刀都刮不掉。" }
+  },
+  "counseling_note_1015": {
+    id: "counseling_note_1015", filename: "輔導室個案追蹤_許佳蓉_1015.doc", title: "輔導室個別諮商紀錄（機密）",
+    author: "專任輔導教師 林淑芬", date: "2003/10/15", category: "學務處與健康中心", minStage: 3,
+    content: `
+      <p><strong>諮商對象：</strong>二年三班 31號 許佳蓉<br>
+      桌椅在 10/14 搬進地下室後，許生今天（10/15）下午第七節課突然在教室尖叫昏厥。醒來後她發抖地說，原本放桌椅的空地板上傳來指甲抓地板的聲音，桌腳旁多了一張素描畫紙，背面用紅筆寫著：<strong>「桌子搬走了我還是會回來，明天是第六次點名了。」</strong></p>
+    `,
+    onReadClue: { id: "clue_counseling_1015", text: "【許佳蓉諮商】桌椅搬走後空地板傳出抓地聲，出現畫紙寫著「明天是第六次點名了」。" }
+  },
+  "attendance_scan": {
+    id: "attendance_scan", filename: "203班_原始點名表_備份.xls", title: "二年三班 10月份第六次～第七次點名異常紀錄",
+    author: "陳志明 老師（掃描存檔）", date: "2003/10/17 16:35", category: "教職員工資料", minStage: 3,
+    content: `
+      <p><strong>紀錄時間：</strong>2003年10月17日（星期五）下午 16:17 降旗前點名<br>
+      這已經是本週第七次點名了。課桌椅明明在禮拜一就鎖進地下室了，但今天下午 <strong>16:17</strong> 放學點名時，全班 31 個人死寂般坐著，點名簿上第 32 欄的「林以安」旁邊，卻自己滲出了一個紅色的出席勾號「✓」。教室最後面空無一人的牆角，傳來一聲貼著地板發出的沙啞回應：<strong>「……有。」</strong></p>
+    `,
+    onReadClue: { id: "clue_1017_time", text: "【原始點名表】第七次點名發生在 10/17 下午 16:17，空牆角傳出「有」的回應。" }
+  },
+
+  // --- Stage 4：登入學生個人系統 (2032 + 0814) 揭開人禍黑幕後解鎖 ---
+  "sketchbook_scan": {
+    id: "sketchbook_scan", filename: "藍色素描本_掃描殘頁_2032.doc", title: "地下室遺留物數位化存檔：藍色封面素描本內頁文字",
+    author: "資訊組掃描建檔（原件作者：林以安）", date: "2003/10/18", category: "備份目錄 (/backup_2032/)", minStage: 4,
+    content: `
+      <p><strong>[檔案說明：此為課桌抽屜尋獲之素描本最後三頁手寫筆記轉錄]</strong></p>
+      <p><strong>92年9月10日：</strong>今天美術課分組，大家很快就把組員找齊了。我舉手想問能不能加入，但老師沒有看到最後一排。沒關係，我把大家認真畫畫的樣子畫下來了。</p>
+      <p><strong>92年9月17日：</strong>親戚說家裡住不下，明天下午放學後要帶我去辦轉學，送我去台中的育幼院。我還沒把畫好的背影送給大家，明天一定要鼓起勇氣跟陳老師說，點名簿第 32 號是我……</p>
+      <p><strong>92年9月18日（字跡潦草歪斜）：</strong>放學了，校門口的紅綠燈壞掉了，對面有白色的貨車開得好快……好痛……好暗……我還沒跟大家說再見……老師明天早上點名的時候，會不會發現少了一個人？</p>
+    `,
+    onReadClue: { id: "clue_sketchbook_notes", text: "【素描本末頁】林以安在 9/18 放學走出無紅綠燈的校門口時，遭白色貨車撞擊！" }
+  },
+  "health_log_0918": {
+    id: "health_log_0918", filename: "健康中心傷病處理月報_9209.doc", title: "學務處衛生組暨健康中心 92年9月份傷病與轉診登記",
+    author: "護理師 劉雅惠", date: "2003/09/30", category: "學務處與健康中心", minStage: 4,
+    content: `
+      <p><strong>【92年9月份特殊傷病與校外事故備註】</strong><br>
+      92年9月18日 下午 <strong>16:30</strong> 接獲青禾派出所通報：一名身著本校夏季制服（未繡學號、書包內夾有二年三班課表影本及寫有「林以安」字樣之作業本）之少年，於校門外<strong>學府路</strong>一段路口（當時號誌故障，且無導護老師執勤）遭超速白色小貨車撞擊彈飛，顱內出血重度昏迷，緊急轉送<strong>台中榮總</strong>加護病房搶救。<br>
+      <strong>異常備註：</strong>本中心隨即聯繫教務處註冊組調閱該生緊急聯絡人並辦理學生平安保險理賠，但註冊組許美玲幹事與教務主任閉門商議後，竟回覆「本校二年級在籍名單中無此學生，屬校外不明人士」，下令本中心不得將此案列入校安通報系統！</p>
+    `,
+    onReadClue: { id: "clue_health_0918", text: "【健康中心月報】9/18 16:30 於學府路遭撞重傷，送往台中榮總，校方卻拒絕校安通報與理賠。" }
+  },
+  "principal_directive_0919": {
+    id: "principal_directive_0919", filename: "校長室機密會報紀錄_920919.doc", title: "92學年度第一學期 校務危機處理臨時會議紀錄（限閱）",
+    author: "校長室秘書 整理", date: "2003/09/19 07:40", category: "校園行政公告", minStage: 4,
+    content: `
+      <p><strong>會議時間：</strong>民國 92 年 9 月 19 日 上午 07:40（早自習前）<br>
+      <strong>出席人員：</strong>校長、教務主任、學務主任、總務主任、註冊組許美玲</p>
+      <p><strong>討論案由：針對昨日（9/18）放學後校門口車禍重傷少年（林以安）之行政處置</strong></p>
+      <p><strong>決議事項：</strong><br>
+      1. 查該生 8 月底轉入公文因註冊組作業疏漏，未完成電腦入籍亦未通知導師；且昨日放學時段生教組漏排學府路路口導護老師，並適逢家長會長名下貨運行車輛肇事。<br>
+      2. 本校今年正值「台中縣績優友善校園」評鑑關鍵期，若「漏報學籍學生於無導護校門口遭撞重傷」一事遭媒體披露，全校主管考績與評鑑將全數泡湯。<br>
+      3. <strong>封口與切割指示：</strong>因該生無直系親屬在側（遠房親戚已收受肇事車主私下和解金並簽署保密切結書），即日起對內對外一律定調「本校無林以安此人」。註冊組須將所有紙本轉學申請書銷毀，各處室嚴禁向二年三班師生及新聞記者提及此事。</p>
+    `,
+    onReadClue: { id: "clue_coverup_meeting", text: "【校長室密會紀錄】校方為保評鑑並掩蓋漏排導護與漏登學籍過失，聯合肇事車主簽保密和解，下令銷毀林以安所有存在證明！" }
+  },
+  "teacher_memo_1016": {
+    id: "teacher_memo_1016", filename: "導師私密草稿_20031016_別過來.txt", title: "二年三班導師個人備忘錄（92/10/16）",
+    author: "陳志明 老師", date: "2003/10/16 19:20", category: "教職員工資料", minStage: 4,
+    content: `
+      <div class="creepy-handwriting">
+        我原本以為教室裡鬧鬼……直到今天午休我去教務處偷聽到許美玲跟主任講電話，我才知道「林以安」不是什麼孤魂野鬼——他是一個活生生被我們整個學校聯手抹殺掉的孩子！<br>
+        九月十八號那天下午，他還在加護病房裡跟死神拔河，而我們這群大人為了保住該死的「友善校園評鑑」，連他在這個學校存在過的痕跡都全部燒光了！如果我放學前有習慣點一次名，我就會發現他不在教室；如果我有走出去看一眼，他就不會一個人躺在冷冰冰的馬路上！<br>
+        他每天回來敲點名簿，不是為了害人——他只是想在徹底消失之前，聽見老師叫一次他的名字，證明他真的來過二年三班……
+      </div>
+    `,
+    onReadClue: { id: "clue_teacher_breakdown", text: "【導師遺留草稿】陳老師得知真相後崩潰：林以安不是惡靈，只是想在被抹除前聽見老師叫一次他的名字。" }
+  },
+  "registrar_email": {
+    id: "registrar_email", filename: "註冊組內部便箋_1018.txt", title: "教務處註冊組 學籍資料庫異動紀錄",
+    author: "註冊組幹事 許美玲", date: "2003/10/18 08:15", category: "教職員工資料", minStage: 4,
+    content: `
+      <p><strong>致 資訊組周文傑組長：</strong>奉校長室指示，請立即將學號 2032（林以安）的所有殘留學籍與網頁快取資料全數刪除，並將網站管理區點名補登按鈕設定前端鎖定（<code>disabled</code>），對外統一回覆為系統編碼跳號錯誤。</p>
+    `,
+    onReadClue: { id: "clue_registrar_truth", text: "【註冊組便箋】註冊組下令刪除 2032 並將管理區點名補登按鈕設為 disabled 前端鎖定。" }
+  },
+  "server_audit_log": {
+    id: "server_audit_log", filename: "資訊機房系統稽核日誌_20031018.log", title: "青禾國中校務主機 資料庫異動與備份紀錄",
+    author: "資訊組 周文傑", date: "2003/10/18 23:50", category: "資訊機房系統", minStage: 4,
+    content: `
+      <p><strong>[SERVER_AUDIT_LOG]</strong> 2003/10/18 08:32:11 執行 DELETE FROM STUDENT_MASTER WHERE SID='2032'。<br>
+      陳志明老師晚上紅著眼眶來機房找我，說他準備遞辭呈了，但在離開之前，他絕不能讓這個孩子被行政系統抹得一乾二淨。我幫他把 2032 的原始編班存根、藍色素描本掃描檔跟點名紀錄鎖進了網站管理區的隱藏目錄。密碼依陳老師的意思，設定為那第七次異常點名的月、日、時、分共八位數字。</p>
+    `,
+    onReadClue: { id: "clue_server_audit", text: "【機房稽核日誌】管理區備份目錄密碼為第七次異常點名的「月、日、時、分」八位數字。" }
+  },
+  "dom_hack_tutorial": {
+    id: "dom_hack_tutorial", filename: "資訊組_網頁原始碼與DOM表單除錯教學_2003.doc", title: "校內資訊研習講義：如何使用除錯控制台修改網頁表單屬性",
+    author: "資訊組 周文傑 編撰", date: "2003/09/15", category: "教職員工資料", minStage: 4,
+    content: `
+      <p><strong>【校務網站維護講義 — フロントエンド (HTML/DOM) 表單鎖定解除教學】</strong></p>
+      <p>各位處室網頁助教大家好：本校舊版 ASP 系統為了防止誤觸，常會在 HTML 表單標籤中加入唯讀或停用屬性（例如 <code>disabled</code> 或 <code>data-lock="true"</code>）。若行政人員在後台遇到按鈕呈現灰色無法點擊的狀況，可透過瀏覽器頂部工具列的 <strong>「網頁除錯控制台 / DOM 屬性修改器」</strong> 進行手動覆寫：</p>
+      <div style="background:#f0f0f0; border:1px solid #888; padding:10px; font-family:'Courier New', monospace; font-size:12.5px; margin:8px 0;">
+        <strong>範例原始碼（鎖定狀態）：</strong><br>
+        &lt;form id="rollcall-form" data-lock="true"&gt;<br>
+        &nbsp;&nbsp;&lt;button id="btn-true-end" disabled&gt;確認出席&lt;/button&gt;<br>
+        &lt;/form&gt;<br><br>
+        <strong>修改步驟（解除鎖定）：</strong><br>
+        1. 將 <code>data-lock="true"</code> 改為 <code>data-lock="false"</code><br>
+        2. 將按鈕標籤內的 <code>disabled</code> 字樣刪除<br>
+        3. 點擊「套用修改至當前頁面」，該按鈕即會恢復可點擊狀態！
+      </div>
+      <p style="font-size:12px; color:#555;">※ 資訊組備註：此為前端緊急維護技巧，請勿對外洩漏。</p>
+    `,
+    onReadClue: { id: "clue_dom_tutorial", text: "【DOM 修改器教學】當後台按鈕反灰鎖定時，開啟上方「網頁除錯控制台 / DOM 屬性修改器」，將 data-lock=\"true\" 改為 \"false\" 並刪除 disabled 即可解鎖！" }
+  }
+};
+
+// 2. 學生名冊與圖書室館藏
+const ROSTER_DATA = [
+  { seat: "01", id: "2001", name: "王建宏", gender: "男", note: "風紀股長" },
+  { seat: "02", id: "2002", name: "李冠宇", gender: "男", note: "" },
+  { seat: "03", id: "2003", name: "張哲維", gender: "男", note: "" },
+  { seat: "04", id: "2004", name: "陳柏翰", gender: "男", note: "體育股長" },
+  { seat: "05", id: "2005", name: "劉家豪", gender: "男", note: "" },
+  { seat: "14", id: "2014", name: "張家瑋", gender: "男", note: "學藝股長" },
+  { seat: "18", id: "2018", name: "黃子軒", gender: "男", note: "" },
+  { seat: "22", id: "2022", name: "吳雅婷", gender: "女", note: "班長" },
+  { seat: "25", id: "2025", name: "林怡君", gender: "女", note: "副班長" },
+  { seat: "28", id: "2028", name: "周欣怡", gender: "女", note: "" },
+  { seat: "29", id: "2029", name: "林志豪", gender: "男", note: "" },
+  { seat: "30", id: "2030", name: "蔡佩珊", gender: "女", note: "" },
+  { seat: "31", id: "2031", name: "許佳蓉", gender: "女", note: "最後一號（靠窗走道旁）" }
+];
+
+const LIBRARY_BOOKS = [
+  { callNo: "857.7 / 1024", title: "少年小樹之歌", author: "佛瑞斯特‧卡特", status: "在架上", cardId: "-" },
+  { callNo: "528.9 / 3308", title: "國中生心理輔導手冊", author: "張春興", status: "在架上", cardId: "-" },
+  { callNo: "312.9 / 8820", title: "青少年電腦網路概論", author: "施威銘", status: "借出中", cardId: "2014" },
+  { callNo: "857.7 / 4021", title: "被遺忘的角落", author: "林良", status: "逾期未還 (離線手寫卡)", cardId: "2032", date: "2003/09/12", hidden: true },
+  { callNo: "177.2 / 1105", title: "如何交到好朋友", author: "戴爾‧卡內基", status: "逾期未還 (離線手寫卡)", cardId: "2032", date: "2003/09/12", hidden: true },
+  { callNo: "940.1 / 2210", title: "基礎鉛筆素描技法", author: "陳景容", status: "已歸還 (離線手寫卡)", cardId: "2032", date: "2003/09/05", hidden: true }
+];
+
+const PAGE_URLS = {
+  home: "http://www.chjh.tcc.edu.tw/2003_backup/index.asp",
+  announcements: "http://www.chjh.tcc.edu.tw/2003_backup/news_list.asp",
+  campus_map: "http://www.chjh.tcc.edu.tw/2003_backup/campus_asset.asp",
+  school_news: "http://www.chjh.tcc.edu.tw/2003_backup/magazine_48.asp",
+  class203: "http://www.chjh.tcc.edu.tw/2003_backup/class/203/index.htm",
+  essays: "http://www.chjh.tcc.edu.tw/2003_backup/literature/essay_list.asp",
+  gallery: "http://www.chjh.tcc.edu.tw/2003_backup/album/2003_fall.asp",
+  library_sys: "http://www.chjh.tcc.edu.tw/2003_backup/library/opac_query.asp",
+  health_center: "http://www.chjh.tcc.edu.tw/2003_backup/student_affairs/health.asp",
+  guestbook: "http://www.chjh.tcc.edu.tw/2003_backup/bbs/board.asp",
+  roster: "http://www.chjh.tcc.edu.tw/2003_backup/academic/student_db.asp",
+  teachers: "http://www.chjh.tcc.edu.tw/2003_backup/staff/faculty_list.asp",
+  admin: "http://www.chjh.tcc.edu.tw/2003_backup/admin/login.asp",
+  temp_old: "http://www.chjh.tcc.edu.tw/2003_backup/temp_old/",
+  search_results: "http://www.chjh.tcc.edu.tw/2003_backup/search.asp"
+};
+
+// 3. 遊戲狀態
+const DEFAULT_STATE = {
+  stage: 1,
+  currentPage: "home",
+  readDocs: [],
+  clues: [],
+  bbsPosts: [
+    { id: 1, author: "203班長吳雅婷", date: "2003/10/01 19:22", title: "下週二音樂課要帶直笛喔！", body: "提醒大家下禮拜二音樂課要考吹直笛，不要忘記帶了！還有衛生股長說教室最後面清潔櫃旁邊不要亂丟垃圾。" },
+    { id: 2, author: "路過的學長", date: "2003/10/11 21:05", title: "學校舊網站什麼時候要改版？", body: "這個網站從我一年級看到現在都沒換過版面耶，不過檔案區好像有很多以前學長姐留下的東西。" },
+    { id: 3, author: "203學藝張家瑋", date: "2003/10/15 20:14", title: "寫生比賽得獎名單出來了嗎？", body: "美術老師說我們班有人交了一張超強的窗邊素描，可是背面只寫代碼沒寫名字，到底是誰畫的啊？" },
+    { id: 4, author: "資訊組周文傑", date: "2003/10/19 00:41", title: "系統資料庫例行維護通知", body: "本週已完成學籍資料庫索引重整與舊快取清理，若瀏覽器顯示異常請按重新整理。" }
+  ],
+  puzzles: {
+    rosterChecked: false,     // 查詢 2032 -> Stage 2
+    tempDirVisited: false,    // 透過假網址進入 /2003_backup/temp_old/ 目錄（必經！）
+    deskVerified: false,      // 總務處財產報廢查詢 (DESK-92-203B) -> Stage 3
+    studentPortalOpen: false, // 學生個人出缺席/就醫系統登入 (2032 + 0814) -> Stage 4
+    adminLoggedIn: false,     // 登入網站管理區 (10171617) -> Stage 5
+    formatAborted: false,     // 【新增】是否曾點擊格式化並放棄，用來顯示 DOM 修改器提示
+    adminButtonUnlocked: false // 透過假後台 DOM 屬性修改器解除按鈕 disabled 鎖定（真結局必經！）
+  },
+  visitorCount: 4819,
+  endingReached: null
+};
+
+let gameState = loadGameState();
+
+function loadGameState() {
+  try {
+    const saved = localStorage.getItem("seventh_attendance_save_v92");
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      return { ...DEFAULT_STATE, ...parsed, puzzles: { ...DEFAULT_STATE.puzzles, ...(parsed.puzzles || {}) } };
+    }
+  } catch (e) {}
+  return JSON.parse(JSON.stringify(DEFAULT_STATE));
+}
+
+function saveGameState() {
+  try {
+    localStorage.setItem("seventh_attendance_save_v92", JSON.stringify(gameState));
+    const ind = document.getElementById("save-indicator");
+    if (ind) {
+      ind.textContent = "寫入中...";
+      setTimeout(() => {
+        if (gameState.stage === 3) {
+          ind.style.color = "#ff6666";
+          ind.textContent = "已讀取你 (16:17)";
+        } else {
+          ind.style.color = "#a8ff9e";
+          ind.textContent = "已同步";
+        }
+      }, 400);
+    }
+  } catch (e) {}
+}
+
+function confirmResetGame() {
+  if (confirm("確定要清除本機快取並重置這份 2003 年網頁快照嗎？")) {
+    localStorage.removeItem("seventh_attendance_save_v92");
+    gameState = JSON.parse(JSON.stringify(DEFAULT_STATE));
+    const overlay = document.getElementById("ending-overlay");
+    overlay.style.display = "none"; overlay.className = "";
+    document.body.className = "stage-1";
+    document.title = "台中縣立青禾國民中學 全球資訊網 - 2003年度存檔";
+    addSysLog("快取已清除，重新載入原始網頁快照。", "warn");
+    updateAllUI(); navigateTo("home");
+  }
+}
+
+function addSysLog(msg, type = "normal") {
+  const box = document.getElementById("ui-sys-log");
+  if (!box) return;
+  const line = document.createElement("div");
+  if (type === "err") line.className = "err";
+  if (type === "warn") line.className = "warn";
+  const now = new Date();
+  const ts = `${String(now.getHours()).padStart(2,"0")}:${String(now.getMinutes()).padStart(2,"0")}:${String(now.getSeconds()).padStart(2,"0")}`;
+  line.textContent = `[${ts}] ${msg}`;
+  box.appendChild(line); box.scrollTop = box.scrollHeight;
+}
+
+function updateAtmosphere() {
+  document.body.className = `stage-${Math.min(5, gameState.stage)}`;
+  const conn = document.getElementById("header-conn-status");
+  const vPrefix = document.getElementById("visitor-prefix");
+  const vSuffix = document.getElementById("visitor-suffix");
+  const vCounter = document.getElementById("visitor-counter");
+  const saveInd = document.getElementById("save-indicator");
+
+  if (gameState.stage === 1) {
+    conn.innerHTML = "● 伺服器狀態：一般唯讀存檔";
+    if (vPrefix) vPrefix.textContent = "您是第";
+    if (vSuffix) vSuffix.textContent = "位訪客";
+    if (saveInd) { saveInd.style.color = "#a8ff9e"; saveInd.textContent = "已同步"; }
+  } else if (gameState.stage === 2) {
+    conn.innerHTML = "● 伺服器狀態：<span style='color:#ffdd77;'>偵測到未釋放磁區 (0x2032)</span>";
+  } else if (gameState.stage === 3) {
+    conn.innerHTML = `● 伺服器狀態：<span style='color:#ff6666;'>外部終端機連線 [${getRealTimestamp()}]</span>`;
+    if (vPrefix) vPrefix.innerHTML = "<span style='color:#990000; font-weight:bold;'>歡迎新同學，你是第</span>";
+    if (vCounter) { vCounter.style.color = "#ff3333"; vCounter.textContent = "000032"; }
+    if (vSuffix) vSuffix.innerHTML = "<span style='color:#990000; font-weight:bold;'>號座位遞補者</span>";
+    if (saveInd) { saveInd.style.color = "#ff6666"; saveInd.textContent = "已讀取你 (16:17)"; }
+  } else {
+    conn.innerHTML = "● 伺服器狀態：<span style='color:#ff4444;'>歷史封存紀錄遭到覆寫</span>";
+    if (vPrefix) vPrefix.textContent = "您是第";
+    if (vCounter) { vCounter.style.color = "#33ff33"; vCounter.textContent = String(gameState.visitorCount).padStart(6, "0"); }
+    if (vSuffix) vSuffix.textContent = "位訪客";
+    if (saveInd) { saveInd.style.color = "#a8ff9e"; saveInd.textContent = "已同步"; }
+  }
+}
+
+function addClue(clueObj) {
+  if (!clueObj) return;
+  if (gameState.clues.some(c => c.id === clueObj.id)) return;
+  gameState.clues.push(clueObj);
+  RetroAudio.playBeep(660, 0.06, "sine", 0.03);
+  addSysLog(`已寫入剪貼簿：${clueObj.id}`, "warn");
+  saveGameState(); updateNotebookUI();
+}
+
+function checkProgression() {
+  const p = gameState.puzzles;
+  let newStage = 1;
+  if (p.rosterChecked) newStage = 2;
+  if (p.deskVerified) newStage = 3;
+  if (p.studentPortalOpen) newStage = 4;
+  if (p.adminLoggedIn) newStage = 5;
+
+  if (newStage > gameState.stage) {
+    gameState.stage = newStage;
+    if (newStage === 3) {
+      RetroAudio.playCreepyWhisperTone();
+      addSysLog(`[ACTIVE_USER] 偵測到外部終端機於 ${getRealTimestamp()} 正在窺視此頁面`, "err");
+    } else {
+      RetroAudio.playBeep(440, 0.15, "sawtooth", 0.04);
+    }
+    addSysLog(`磁區索引位址變更 -> 0x0${newStage}`, "err");
+    updateAtmosphere();
+  }
+  saveGameState(); updateNotebookUI();
+}
+
+// ============================================================================
+// IE 6.0 假網址列導航（必經主線流程）
+// ============================================================================
+function navigateByUrl() {
+  const raw = (document.getElementById("ie-url-bar").value || "").trim().toLowerCase();
+  if (raw.includes("/temp_old")) {
+    gameState.puzzles.tempDirVisited = true;
+    addClue({ id: "clue_temp_old", text: "【伺服器保留目錄】透過網址列手動輸入路徑連入 /2003_backup/temp_old/，取得被撤下首頁連結的導師隨筆與作文備份。" });
+    addSysLog("IIS 目錄瀏覽授權通過：/2003_backup/temp_old/", "warn");
+    saveGameState();
+    navigateTo("temp_old");
+    return;
+  }
+  if (raw.includes("/backup_2032")) {
+    navigateTo("admin");
+    return;
+  }
+  const matchedPage = Object.keys(PAGE_URLS).find(k => PAGE_URLS[k].toLowerCase() === raw);
+  if (matchedPage) {
+    navigateTo(matchedPage);
+  } else {
+    showRetroAlert("HTTP 404 - 找不到網頁", `伺服器找不到路徑：<br><code>${raw.replace(/</g,"&lt;")}</code><br><br>請確認網址拼字或參閱資訊組目錄遷移公告。`, true);
+  }
+}
+
+// ============================================================================
+// 檢視網頁原始碼 (View Source)
+// ============================================================================
+function viewPageSource() {
+  const page = gameState.currentPage;
+  let sourceHtml = "";
+
+  if (page === "essays" || page === "home" || page === "roster" || page === "announcements") {
+    sourceHtml = `&lt;html&gt;
+&lt;head&gt;&lt;title&gt;台中縣立青禾國民中學 - 教務與學生藝文&lt;/title&gt;&lt;/head&gt;
+&lt;body bgcolor="#f7f5ec"&gt;
+  &lt;!-- 2003/10/18 資訊組周文傑備註： --&gt;
+  <span class="html-comment">&lt;!-- 註冊組許幹事早上打電話叫我把 2032 (林以安) 的網頁連結全部拿掉， --&gt;
+  &lt;!-- 但陳老師拜託我先留底，所以我把原始檔移到 /2003_backup/temp_old/ 裡面沒刪。 --&gt;
+  &lt;!-- 請在上方 IE 網址列輸入 http://www.chjh.tcc.edu.tw/2003_backup/temp_old/ 進入。 --&gt;</span>
+  &lt;table border="1" width="100%"&gt;
+    &lt;tr&gt;&lt;td&gt;31號 許佳蓉 - 開學第一個月的感想&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;`;
+  } else if (page === "admin") {
+    const isUnlocked = Boolean(gameState.puzzles.adminButtonUnlocked);
+    sourceHtml = `&lt;html&gt;
+&lt;head&gt;&lt;title&gt;網站管理區 - /backup_2032/&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- 2003/10/18 註冊組許美玲強制鎖定表單屬性 --&gt;
+  <span class="html-comment">&lt;!-- 提示：請點擊上方「網頁除錯控制台 / DOM 屬性修改器」解除按鈕鎖定 --&gt;</span>
+  &lt;form id="rollcall-form" data-lock="${!isUnlocked}"&gt;
+    &lt;input name="seat" value="32" readonly /&gt;
+    &lt;input name="sid" value="" /&gt;
+    &lt;input name="sname" value="" /&gt;
+    &lt;button id="btn-true-end" ${isUnlocked ? "" : "disabled"}&gt;✔ 補登學籍並確認出席&lt;/button&gt;
+  &lt;/form&gt;`;
+  } else {
+    sourceHtml = `&lt;html&gt;
+&lt;head&gt;&lt;title&gt;台中縣立青禾國民中學 全球資訊網&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- SNAPSHOT_DATE: 2004/02/14 03:12:09 --&gt;
+  &lt;!-- CURRENT_PATH: ${PAGE_URLS[page] || ""} --&gt;
+  <span class="html-comment">&lt;!-- 站內全文檢索系統依目前權限等級 (STAGE_${gameState.stage}) 掃描已掛載目錄。 --&gt;</span>`;
+  }
+
+  if (gameState.stage >= 3) {
+    sourceHtml += `\n\n  <span class="html-ghost-comment">&lt;!-- [UNALLOCATED_SECTOR 0x2032] 他們把我的桌子搬進地下室了，好黑，好冷，我每天都有來上課，為什麼不叫我的名字…… --&gt;</span>`;
+  }
+
+  sourceHtml += `\n&lt;/body&gt;\n&lt;/html&gt;`;
+
+  activeDocId = null;
+  stubbornCloseAttempts = 0;
+  document.getElementById("doc-win-title").textContent = `原始碼檢視器 - ${PAGE_URLS[page] || "index.asp"}`;
+  document.getElementById("doc-win-body").innerHTML = `<div class="source-code-box">${sourceHtml}</div>`;
+  document.getElementById("doc-win-status").textContent = "模式：HTML 原始碼檢視 (只讀)";
+  document.getElementById("doc-modal-backdrop").style.display = "flex";
+}
+
+// ============================================================================
+// 假後台：網頁除錯控制台 / DOM 屬性修改器（開啟真結局的必經流程！）
+// ============================================================================
+function openDomConsole() {
+  activeDocId = null;
+  stubbornCloseAttempts = 0;
+  const isAdminPage = (gameState.currentPage === "admin" && gameState.puzzles.adminLoggedIn);
+
+  if (!isAdminPage) {
+    document.getElementById("doc-win-title").textContent = "IE 網頁除錯控制台 / DOM 屬性修改器";
+    document.getElementById("doc-win-body").innerHTML = `
+      <div class="info-box">
+        <strong>[DOM 屬性修改器 — 當前頁面：${PAGE_URLS[gameState.currentPage] || "index.asp"}]</strong><br>
+        目前頁面沒有偵測到遭到 <code>disabled</code> 行政鎖定的表單控制項。<br>
+        <span style="font-size:12px; color:#555;">（註：如需使用教學，請參閱「教職員工資料」中資訊組周文傑編撰的除錯教學講義。）</span>
+      </div>
+      <textarea class="dom-editor-textarea" readonly>&lt;!-- 唯讀靜態頁面：無可覆寫之表單權限鎖 --&gt;
+&lt;document path="${PAGE_URLS[gameState.currentPage] || ""}" status="READ_ONLY" /&gt;</textarea>
+    `;
+    document.getElementById("doc-win-status").textContent = "控制台狀態：待機中";
+    document.getElementById("doc-modal-backdrop").style.display = "flex";
+    return;
+  }
+
+  const isUnlocked = Boolean(gameState.puzzles.adminButtonUnlocked);
+  const currentCode = `<form id="rollcall-form" data-lock="${isUnlocked ? "false" : "true"}">
+  <input type="text" name="seat" value="32" readonly />
+  <input type="text" name="sid" placeholder="輸入學號" />
+  <input type="text" name="sname" placeholder="輸入姓名" />
+  <button id="btn-true-end"${isUnlocked ? "" : " disabled"}>✔ 補登學籍並確認出席（完成第七次點名）</button>
+</form>`;
+
+  document.getElementById("doc-win-title").textContent = "IE 網頁除錯控制台 / DOM 屬性修改器 - /backup_2032/";
+  document.getElementById("doc-win-body").innerHTML = `
+    <div class="info-box" style="margin-top:0;">
+      <strong>[偵測到行政鎖定表單：#rollcall-form]</strong><br>
+      請依照資訊組教學講義修改下方 HTML 原始碼，解除按鈕鎖定後點擊「套用修改至當前頁面」：
+    </div>
+    <textarea id="dom-code-editor" class="dom-editor-textarea">${currentCode}</textarea>
+    <div style="margin-top:10px; display:flex; justify-content:space-between; align-items:center;">
+      <button onclick="applyDomModification()" style="background:#1a3b6e; color:#fff; font-weight:bold; padding:4px 12px;">套用修改至當前頁面</button>
+    </div>
+  `;
+  document.getElementById("doc-win-status").textContent = "控制台狀態：可編輯 DOM 節點";
+  document.getElementById("doc-modal-backdrop").style.display = "flex";
+}
+
+function applyDomModification() {
+  const editor = document.getElementById("dom-code-editor");
+  if (!editor) return;
+  const code = editor.value;
+
+  const lockRemoved = /data-lock\s*=\s*["']false["']/i.test(code);
+  const disabledRemoved = !/\bdisabled\b/i.test(code);
+
+  if (lockRemoved && disabledRemoved) {
+    gameState.puzzles.adminButtonUnlocked = true;
+    addClue({ id: "clue_dom_unlocked", text: "【DOM 屬性覆寫】透過除錯控制台修改 HTML 屬性，成功解除了點名補登按鈕的行政鎖定！" });
+    addSysLog("[DOM_OVERRIDE] #btn-true-end 屬性已覆寫：disabled=false", "warn");
+    saveGameState();
+    document.getElementById("doc-modal-backdrop").style.display = "none";
+    renderCurrentPage();
+    showRetroAlert("DOM 屬性套用成功", "已成功覆寫網頁表單屬性！<br>「✔ 補登學籍並確認出席」按鈕已解除鎖定，請輸入 <strong>2032</strong> 與 <strong>林以安</strong> 完成點名。");
+  } else {
+    showRetroAlert("DOM 驗證未通過", "表單仍處於鎖定狀態！請參考：資訊組_網頁原始碼與DOM表單除錯教學_2003.doc", true);
+  }
+}
+
+// ============================================================================
+// 文件檢視與失控視窗演出
+// ============================================================================
+let stubbornCloseAttempts = 0;
+let activeDocId = null;
+let morphTimer = null;
+
+function spawnCascadePopups() {
+  const messages = ["無 法 刪 除", "我 在 這 裡", "叫 我 的 名 字"];
+  messages.forEach((txt, idx) => {
+    setTimeout(() => {
+      const div = document.createElement("div");
+      div.className = "cascade-popup";
+      div.style.left = `${22 + idx * 7}%`;
+      div.style.top = `${26 + idx * 8}%`;
+      div.innerHTML = `
+        <div class="win-titlebar" style="background:linear-gradient(90deg, #6b0000, #c43b3b);">
+          <span>系統錯誤 0x2032</span>
+          <button class="win-close-btn" onclick="this.closest('.cascade-popup').remove()">✕</button>
+        </div>
+        <div style="padding:14px; text-align:center; font-weight:bold; color:#800000; letter-spacing:3px;">
+          ${txt}
+        </div>
+      `;
+      document.body.appendChild(div);
+      RetroAudio.playBeep(320 - idx * 40, 0.09, "sawtooth", 0.05);
+    }, idx * 240);
+  });
+}
+
+function openDocument(docId) {
+  const doc = DOCUMENTS[docId];
+  if (!doc) return;
+  activeDocId = docId;
+  stubbornCloseAttempts = 0;
+  clearTimeout(morphTimer);
+
+  if (!gameState.readDocs.includes(docId)) gameState.readDocs.push(docId);
+  if (doc.onReadClue) addClue(doc.onReadClue);
+
+  const winEl = document.getElementById("doc-window");
+  winEl.style.transform = "translate(0, 0)";
+
+  document.getElementById("doc-win-title").textContent = `${doc.filename} - 檔案檢視器`;
+  document.getElementById("doc-win-body").innerHTML = `
+    <div class="doc-meta-header">
+      <div><strong>文件標題：</strong>${wrapName(doc.title)}</div>
+      <div><strong>作者 / 來源：</strong>${wrapName(doc.author)}</div>
+      <div><strong>建檔日期：</strong>${doc.date} ｜ <strong>分類：</strong>${doc.category}</div>
+    </div>
+    <div>${wrapName(doc.content)}</div>
+  `;
+  document.getElementById("doc-win-status").textContent = `檔案名稱：${doc.filename} ｜ 狀態：唯讀`;
+  document.getElementById("doc-modal-backdrop").style.display = "flex";
+
+  if (gameState.stage >= 2 && (docId === "my_seat" || docId === "class_diary_0915")) {
+    morphTimer = setTimeout(() => {
+      const targetP = document.getElementById(docId === "my_seat" ? "morph-para-seat" : "morph-para-diary");
+      if (targetP && document.getElementById("doc-modal-backdrop").style.display === "flex") {
+        const origHtml = targetP.innerHTML;
+        targetP.style.color = "#990000";
+        targetP.style.fontWeight = "bold";
+        targetP.innerHTML = "  你看得見我對不對？不要把視窗關掉……最後一排靠窗的位置好冷，你願意代替我坐在這裡嗎？";
+        RetroAudio.playCreepyWhisperTone();
+        setTimeout(() => {
+          if (targetP) {
+            targetP.style.color = "";
+            targetP.style.fontWeight = "";
+            targetP.innerHTML = origHtml;
+          }
+        }, 2800);
+      }
+    }, 3200);
+  }
+
+  saveGameState(); updateNotebookUI(); renderCurrentPage();
+}
+
+function attemptCloseDocModal() {
+  if (gameState.stage >= 3 && activeDocId === "teacher_memo_1010" && stubbornCloseAttempts < 2) {
+    stubbornCloseAttempts++;
+    const winEl = document.getElementById("doc-window");
+    const offsetX = stubbornCloseAttempts === 1 ? -35 : 42;
+    const offsetY = stubbornCloseAttempts === 1 ? 24 : -28;
+    winEl.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+    if (stubbornCloseAttempts === 1) spawnCascadePopups();
+    else RetroAudio.playBeep(200, 0.14, "sawtooth", 0.05);
+    return;
+  }
+  clearTimeout(morphTimer);
+  activeDocId = null;
+  document.getElementById("doc-modal-backdrop").style.display = "none";
+}
+
+function openPhotoZoom(imgSrc, title, timestamp, captionHtml, clueObj = null) {
+  if (clueObj) addClue(clueObj);
+  document.getElementById("photo-zoom-title").textContent = `相片檢視器 - ${title}`;
+  document.getElementById("photo-zoom-img").src = imgSrc;
+  document.getElementById("photo-zoom-ts").textContent = timestamp;
+  document.getElementById("photo-zoom-caption").innerHTML = captionHtml;
+  document.getElementById("photo-zoom-backdrop").style.display = "flex";
+}
+
+function closePhotoZoom() { document.getElementById("photo-zoom-backdrop").style.display = "none"; }
+
+function showRetroAlert(title, msg, isErr = false) {
+  RetroAudio.playBeep(isErr ? 220 : 780, 0.1, isErr ? "sawtooth" : "sine", 0.04);
+  document.getElementById("alert-title").textContent = title;
+  document.getElementById("alert-message").innerHTML = wrapName(msg);
+  const icon = document.getElementById("alert-icon");
+  icon.textContent = isErr ? "✕" : "i";
+  icon.style.background = isErr ? "#990000" : "#1a3b6e";
+  document.getElementById("alert-modal-backdrop").style.display = "flex";
+}
+function closeAlertModal() { document.getElementById("alert-modal-backdrop").style.display = "none"; }
+
+function navigateTo(pageId) {
+  gameState.currentPage = pageId;
+  const urlBar = document.getElementById("ie-url-bar");
+  if (urlBar && PAGE_URLS[pageId]) urlBar.value = PAGE_URLS[pageId];
+  saveGameState();
+  document.querySelectorAll(".nav-btn").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.page === pageId);
+  });
+  renderCurrentPage();
+}
+
+function updateNotebookUI() {
+  const clueList = document.getElementById("ui-clue-list");
+  document.getElementById("clue-count").textContent = gameState.clues.length;
+  if (gameState.clues.length === 0) {
+    clueList.innerHTML = `<li class="clue-item" style="color:#666;">（尚無紀錄）</li>`;
+  } else {
+    clueList.innerHTML = gameState.clues.slice().reverse().map(c => `<li class="clue-item new-clue">${wrapName(c.text)}</li>`).join("");
+  }
+
+  const docList = document.getElementById("ui-doc-list");
+  document.getElementById("doc-count").textContent = gameState.readDocs.length;
+  if (gameState.readDocs.length === 0) {
+    docList.innerHTML = `<li class="clue-item" style="color:#666;">（尚無紀錄）</li>`;
+  } else {
+    docList.innerHTML = gameState.readDocs.map(id => {
+      const d = DOCUMENTS[id];
+      return `<li class="clue-item" style="cursor:pointer;" onclick="openDocument('${id}')"><strong>${d.filename}</strong></li>`;
+    }).join("");
+  }
+}
+
+function updateAllUI() {
+  updateAtmosphere(); updateNotebookUI();
+  document.querySelectorAll(".nav-btn").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.page === gameState.currentPage);
+  });
+}
+
+function renderDocLink(id, label = null) {
+  const doc = DOCUMENTS[id];
+  if (!doc) return "";
+  const isRead = gameState.readDocs.includes(id);
+  return `<button class="doc-link ${isRead ? 'read' : ''}" onclick="openDocument('${id}')">
+    <span>${label || doc.filename}</span>
+    <span style="font-size:11px; color:#666; font-weight:normal;">${isRead ? '[已讀]' : ''}</span>
+  </button>`;
+}
+
+// ============================================================================
+// 4. 各頁面渲染引擎
+// ============================================================================
+function renderCurrentPage() {
+  const container = document.getElementById("center-content");
+  const page = gameState.currentPage;
+
+  if (page === "home") {
+    container.innerHTML = `
+      <div class="breadcrumb">
+        <span>現在位置：首頁 &gt; 歡迎光臨青禾國中</span>
+        <span>最後更新：2003/11/12</span>
+      </div>
+      <h2 class="page-title">歡迎來到台中縣立青禾國民中學全球資訊網</h2>
+      <div class="info-box">
+        <strong>【站務公告】</strong><br>
+        歡迎造訪本校全球資訊網。本站收錄 92 學年度各處室行政公告、校園通訊、班級網頁、圖書室館藏、學生學籍出缺席查詢及師生留言板。
+      </div>
+
+      <table class="retro-table">
+        <tr><th style="width:65%;">最新校園動態與公告</th><th style="width:20%;">發布單位</th><th style="width:15%;">日期</th></tr>
+        <tr><td><a href="javascript:void(0)" onclick="navigateTo('announcements')">★ 資訊組：舊版網頁目錄遷移與伺服器保留路徑說明公告</a></td><td>資訊組</td><td>2003/10/18</td></tr>
+        <tr><td><a href="javascript:void(0)" onclick="navigateTo('announcements')">★ 92學年度第一學期第一次定期評量日程表公告</a></td><td>教務處教學組</td><td>2003/10/05</td></tr>
+        <tr><td><a href="javascript:void(0)" onclick="navigateTo('school_news')">★ 青禾青年通訊第48期出版：校園寫生比賽評審紀錄</a></td><td>青禾青年社</td><td>2003/10/10</td></tr>
+        <tr><td><a href="javascript:void(0)" onclick="navigateTo('gallery')">★ 92學年度開學典禮暨校園設施巡檢相片集錦已上傳</a></td><td>學務處訓育組</td><td>2003/09/28</td></tr>
+      </table>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px;">
+        <div class="bevel-in" style="background:#efece0; padding:10px;">
+          <strong style="color:#1a3b6e;">總務處財產與處室導覽</strong>
+          <p style="font-size:13px; margin:6px 0;">透過校區配置圖與總務處財產清冊系統，可查詢各教室設備與報廢移轉單據。</p>
+          <button onclick="navigateTo('campus_map')">前往總務與導覽 &gt;&gt;</button>
+        </div>
+        <div class="bevel-in" style="background:#efece0; padding:10px;">
+          <strong style="color:#1a3b6e;">學籍與館藏查詢系統</strong>
+          <p style="font-size:13px; margin:6px 0;">提供在學學生學籍資料核對、個人出缺席明細與圖書室館藏檢索。</p>
+          <button onclick="navigateTo('roster')">學籍系統 &gt;&gt;</button>
+          <button onclick="navigateTo('library_sys')" style="margin-left:4px;">圖書室 &gt;&gt;</button>
+        </div>
+      </div>
+    `;
+  }
+
+  else if (page === "announcements") {
+    container.innerHTML = `
+      <div class="breadcrumb"><span>現在位置：首頁 &gt; 校園行政公告</span><span>行政處室發布欄</span></div>
+      <h2 class="page-title">校園行政與教務公告</h2>
+      <table class="retro-table">
+        <tr><th>公告日期</th><th>發布處室</th><th>主旨與檔案下載</th></tr>
+        <tr style="background:#fffdf2;"><td>2003/10/18</td><td>資訊組</td><td>${renderDocLink("dir_migration_notice")}</td></tr>
+        <tr><td>2003/10/05</td><td>教學組</td><td>${renderDocLink("midterm_notice")}</td></tr>
+        <tr><td>2003/09/28</td><td>衛生組</td><td>${renderDocLink("lunch_menu")}</td></tr>
+        <tr><td>2003/10/14</td><td>總務處</td><td>二年三班教室後方多餘之舊式木製課桌椅一套，已依導師申請辦理財產移轉封存（請至「校園導覽與處室」財產系統調閱單據）。</td></tr>
+        ${gameState.stage >= 4 ? `<tr style="background:#fff8f6;"><td>2003/09/19</td><td><span style="color:#990000;">校長室(限閱)</span></td><td>${renderDocLink("principal_directive_0919")}</td></tr>` : ""}
+        <tr><td>2003/09/01</td><td>教務處</td><td>92學年度第一學期正式開學，請各班導師於第一週內完成紙本點名簿核對。</td></tr>
+      </table>
+    `;
+  }
+
+  else if (page === "campus_map") renderCampusMapPage(container);
+  else if (page === "school_news") {
+    container.innerHTML = `
+      <div class="breadcrumb"><span>現在位置：首頁 &gt; 青禾青年通訊</span><span>學生社團發行</span></div>
+      <h2 class="page-title">青禾青年校園通訊 — 第48期</h2>
+      <table class="retro-table">
+        <tr><th>專欄單元</th><th>文章標題</th><th>作者 / 編輯</th></tr>
+        <tr><td>校園專題</td><td>${renderDocLink("school_news_vol12")}</td><td>青禾青年社</td></tr>
+        <tr><td>師生文苑</td><td>${renderDocLink("art_club_award")}</td><td>黃美惠老師</td></tr>
+      </table>
+    `;
+  }
+  else if (page === "gallery") renderGalleryPage(container);
+  else if (page === "library_sys") renderLibraryPage(container);
+  else if (page === "health_center") renderHealthCenterPage(container);
+  else if (page === "guestbook") renderGuestbookPage(container);
+  else if (page === "essays") {
+    container.innerHTML = `
+      <div class="breadcrumb"><span>現在位置：首頁 &gt; 學生藝文園地</span><span>國文科教學研究會</span></div>
+      <h2 class="page-title">學生藝文園地 — 優良作文與心得選刊</h2>
+      <table class="retro-table">
+        <tr><th>日期</th><th>作者</th><th>作品名稱</th></tr>
+        <tr><td>2003/10/02</td><td>許佳蓉 (31號)</td><td>${renderDocLink("class_diary_0915")}</td></tr>
+        ${gameState.puzzles.tempDirVisited ? `<tr style="background:#fffdf0;"><td>2003/09/15</td><td><span class="haunted-name">林以安</span> (32號)</td><td>${renderDocLink("my_seat")}</td></tr>` : `<tr><td>2003/09/15</td><td style="color:#888;">[已移至保留目錄]</td><td style="color:#888;">我的座位.doc（連結已撤下，請參閱資訊組目錄遷移公告）</td></tr>`}
+        ${gameState.stage >= 4 ? `<tr style="background:#f5f8ff;"><td>2003/10/18</td><td>遺留物掃描</td><td>${renderDocLink("sketchbook_scan")}</td></tr>` : ""}
+      </table>
+    `;
+  }
+  else if (page === "roster") renderRosterPage(container);
+  else if (page === "class203") renderClass203Page(container);
+  else if (page === "teachers") renderTeachersPage(container);
+  else if (page === "admin") renderAdminPage(container);
+  else if (page === "temp_old") renderTempOldDirPage(container);
+  else if (page === "search_results") renderSearchResultsPage(container);
+}
+
+// ----------------------------------------------------------------------------
+// 隱藏目錄頁面：Index of /2003_backup/temp_old/（必經主線頁面）
+// ----------------------------------------------------------------------------
+function renderTempOldDirPage(container) {
+  container.innerHTML = `
+    <div class="breadcrumb"><span>現在位置：/2003_backup/temp_old/</span><span>IIS 5.0 Directory Listing</span></div>
+    <h2 class="page-title">Index of /2003_backup/temp_old/</h2>
+    <div class="info-box"><strong>[伺服器保留目錄索引]</strong> 此資料夾已關閉首頁超連結清單，僅列出硬碟中尚未清除的暫存檔案：</div>
+    <table class="retro-table">
+      <tr><th>檔案名稱</th><th>最後修改日期</th><th>大小</th></tr>
+      <tr><td><a href="javascript:void(0)" onclick="navigateTo('home')">[回到上層目錄]</a></td><td>-</td><td>-</td></tr>
+      <tr><td>${renderDocLink("my_seat")}</td><td>2003/09/15 16:40</td><td>18 KB</td></tr>
+      <tr><td>${renderDocLink("teacher_memo_0925")}</td><td>2003/09/25 17:10</td><td>4 KB</td></tr>
+      ${gameState.stage >= 3 ? `<tr><td>${renderDocLink("teacher_memo_1010")}</td><td>2003/10/10 23:45</td><td>6 KB</td></tr>` : ""}
+      ${gameState.stage >= 3 ? `<tr><td>${renderDocLink("attendance_scan")}</td><td>2003/10/17 16:35</td><td>42 KB</td></tr>` : ""}
+    </table>
+  `;
+}
+
+// ----------------------------------------------------------------------------
+// 互動單元 1：校園導覽與處室（需先在 /temp_old/ 取得財產編號 DESK-92-203B）
+// ----------------------------------------------------------------------------
+function renderCampusMapPage(container) {
+  const deskVerified = gameState.puzzles.deskVerified;
+
+  container.innerHTML = `
+    <div class="breadcrumb"><span>現在位置：首頁 &gt; 校園導覽與處室</span><span>總務處庶務組</span></div>
+    <h2 class="page-title">青禾國中校園平面導覽與財產查詢</h2>
+    <div class="pixel-canvas-box">
+      <div style="font-size:12px; color:#555; margin-bottom:8px;">[ 青禾國中校區配置簡圖 ]</div>
+      <div class="campus-map-grid">
+        <div class="map-zone-btn" onclick="inspectCampusZone('admin_bldg')">行政大樓<br><span style="font-size:11px; font-weight:normal;">教務處 / 總務處 / 校長室</span></div>
+        <div class="map-zone-btn" onclick="inspectCampusZone('class_2f')">教學大樓 2F<br><span style="font-size:11px; font-weight:normal;">二年三班教室</span></div>
+        <div class="map-zone-btn" onclick="inspectCampusZone('library')">圖書室<br><span style="font-size:11px; font-weight:normal;">教學大樓 3F</span></div>
+        <div class="map-zone-btn" onclick="inspectCampusZone('art_room')">美術教室<br><span style="font-size:11px; font-weight:normal;">藝能大樓 2F</span></div>
+        <div class="map-zone-btn" onclick="inspectCampusZone('basement')">地下室器材室<br><span style="font-size:11px; font-weight:normal;">教學大樓 B1</span></div>
+        <div class="map-zone-btn" onclick="inspectCampusZone('server_room')">資訊機房<br><span style="font-size:11px; font-weight:normal;">行政大樓 3F</span></div>
+      </div>
+    </div>
+
+    <div id="campus-zone-detail" class="info-box">點擊任一校舍區塊檢視處室簡介。</div>
+
+    <div class="form-box">
+      <h4>總務處財產報廢與移轉清冊查詢系統</h4>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:8px;">
+        <label>財產編號：<input type="text" id="desk-asset-code" placeholder="例：DESK-92-XXXX" style="width:155px;" onkeydown="if(event.key==='Enter') verifyDeskAsset()"></label>
+        <button onclick="verifyDeskAsset()">查詢財產單據</button>
+      </div>
+      ${deskVerified ? `<div class="info-box" style="margin-top:10px; margin-bottom:0;">✔ 已調閱財產移轉單：${renderDocLink("basement_inventory")}</div>` : ""}
+    </div>
+  `;
+}
+
+function inspectCampusZone(zone) {
+  const detailBox = document.getElementById("campus-zone-detail");
+  if (zone === "admin_bldg") {
+    detailBox.innerHTML = `<strong>行政大樓：</strong>教務處、總務處與校長室所在地。${gameState.stage >= 4 ? "<br>" + renderDocLink("principal_directive_0919") : ""}`;
+  } else if (zone === "class_2f") {
+    detailBox.innerHTML = `<strong>教學大樓 2F（二年三班）：</strong>位於走廊最西側，靠窗面朝操場。<br><button onclick="navigateTo('class203')" style="margin-top:6px;">檢視班級網頁 &gt;&gt;</button>`;
+  } else if (zone === "library") {
+    detailBox.innerHTML = `<strong>圖書室（教學大樓 3F）：</strong>${renderDocLink("library_log")}`;
+  } else if (zone === "art_room") {
+    detailBox.innerHTML = `<strong>美術教室（藝能大樓 2F）：</strong>教具櫃內存放著本屆寫生比賽未具名的《窗邊背影》鉛筆素描稿。`;
+  } else if (zone === "basement") {
+    detailBox.innerHTML = `<strong>地下室舊器材儲藏室（教學大樓 B1）：</strong>存放各班報廢課桌椅，所有報廢移轉紀錄皆登錄於總務處財產系統。`;
+  } else if (zone === "server_room") {
+    detailBox.innerHTML = `<strong>資訊機房（行政大樓 3F）：</strong>校務主機與網站備份伺服器所在。`;
+  }
+}
+
+function verifyDeskAsset() {
+  const code = (document.getElementById("desk-asset-code").value || "").trim().toUpperCase();
+  if (code === "DESK-92-203B") {
+    // 確保玩家已先走過假網址 /temp_old/ 流程
+    if (!gameState.puzzles.tempDirVisited) {
+      showRetroAlert("權限同步提示", "請先透過網址列前往伺服器保留目錄 <code>/2003_backup/temp_old/</code> 核對導師隨筆存檔，再執行財產清冊比對。", true);
+      return;
+    }
+    gameState.puzzles.deskVerified = true;
+    addClue({ id: "clue_desk_verified", text: "【總務處財產系統】輸入財產編號 DESK-92-203B，調出了 10/14 將 203 班多餘課桌椅封存至地下室的移轉單。" });
+    checkProgression();
+    openDocument("basement_inventory");
+  } else {
+    showRetroAlert("查無財產紀錄", "系統查無此財產編號之報廢或移轉單據。", true);
+  }
+}
+
+// ----------------------------------------------------------------------------
+// 互動單元 2：活動剪影相簿（純寫實相片存檔，無黑影變異）
+// ----------------------------------------------------------------------------
+function renderGalleryPage(container) {
+  container.innerHTML = `
+    <div class="breadcrumb"><span>現在位置：首頁 &gt; 活動剪影相簿</span><span>學務處訓育組上傳</span></div>
+    <h2 class="page-title">92學年度校園活動與設施巡檢剪影相簿</h2>
+
+    <div class="photo-grid">
+      <div class="photo-card">
+        <div class="retro-photo-frame" onclick="inspectPhotoOpening()">
+          <img src="${CUSTOM_PHOTOS.opening}" alt="IMG_0901.JPG">
+          <div class="photo-timestamp">2003/09/01 08:32</div>
+        </div>
+        <div style="font-size:12px; margin-top:6px;"><strong>IMG_0901.JPG</strong> — 開學典禮朝會隊伍</div>
+      </div>
+
+      <div class="photo-card">
+        <div class="retro-photo-frame" onclick="inspectPhotoClassroom()">
+          <img src="${CUSTOM_PHOTOS.classroom}" alt="IMG_1012.JPG">
+          <div class="photo-timestamp">2003/10/12 16:45</div>
+        </div>
+        <div style="font-size:12px; margin-top:6px;"><strong>IMG_1012.JPG</strong> — 放學後的二年三班教室</div>
+      </div>
+
+      <div class="photo-card">
+        <div class="retro-photo-frame" onclick="inspectPhotoBasement()">
+          <img src="${CUSTOM_PHOTOS.basement}" alt="IMG_1014.JPG">
+          <div class="photo-timestamp">2003/10/14 13:18</div>
+        </div>
+        <div style="font-size:12px; margin-top:6px;"><strong>IMG_1014.JPG</strong> — 地下室封存課桌刻痕特寫</div>
+      </div>
+
+      <div class="photo-card">
+        <div class="retro-photo-frame" onclick="inspectPhotoArtCabinet()">
+          <img src="${CUSTOM_PHOTOS.art_cabinet}" alt="IMG_0925.JPG">
+          <div class="photo-timestamp">2003/09/25 12:10</div>
+        </div>
+        <div style="font-size:12px; margin-top:6px;"><strong>IMG_0925.JPG</strong> — 美術教室教具櫃與未交素描</div>
+      </div>
+    </div>
+  `;
+}
+
+function inspectPhotoOpening() {
+  openPhotoZoom(CUSTOM_PHOTOS.opening, "IMG_0901.JPG", "2003/09/01 08:32",
+    "<strong>拍攝地點：</strong>青禾國中操場<br><strong>畫面紀錄：</strong>二年三班排在隊伍最右側，數一數隊伍人數卻有 32 人——最後一排許佳蓉身旁多站了一名身形瘦小、穿著泛白舊襯衫的男生。",
+    { id: "clue_photo_opening", text: "【相片 IMG_0901.JPG】開學典禮照片裡，二年三班隊伍站了 32 個人，多出一名穿舊襯衫的男生。" }
+  );
+}
+
+function inspectPhotoClassroom() {
+  openPhotoZoom(CUSTOM_PHOTOS.classroom, "IMG_1012.JPG", "2003/10/12 16:45",
+    "<strong>拍攝地點：</strong>二年三班教室後方靠窗角落<br><strong>畫面紀錄：</strong>最後一排靠窗空桌上放著一本深藍色封面素描本與幾塊整齊排列的橡皮擦。",
+    { id: "clue_photo_1012", text: "【相片 IMG_1012.JPG】教室後方靠窗空桌上放著藍色封面素描本與幾塊新橡皮擦。" }
+  );
+}
+
+function inspectPhotoBasement() {
+  openPhotoZoom(CUSTOM_PHOTOS.basement, "IMG_1014.JPG", "2003/10/14 13:18",
+    "<strong>拍攝地點：</strong>地下室器材室<br><strong>畫面紀錄：</strong>木頭桌面中央用美工刀刻著模糊的「203-32」字樣，桌側貼著總務處財產標籤（已模糊，需查閱導師隨筆確認完整編號）。",
+    { id: "clue_photo_basement", text: "【相片 IMG_1014.JPG】地下室報廢課桌貼有總務處財產標籤，桌面刻著「203-32」。" }
+  );
+}
+
+function inspectPhotoArtCabinet() {
+  openPhotoZoom(CUSTOM_PHOTOS.art_cabinet, "IMG_0925.JPG", "2003/09/25 12:10",
+    "<strong>拍攝地點：</strong>美術教室教具櫃<br><strong>畫面紀錄：</strong>櫃內存放著未具名的《窗邊背影》素描稿，背面註記 203-32 與日期 08/14。",
+    { id: "clue_photo_art", text: "【相片 IMG_0925.JPG】美術教室教具櫃存有註記 203-32 與 08/14 的未具名素描稿。" }
+  );
+}
+
+// ----------------------------------------------------------------------------
+// 互動單元 3：圖書室館藏查詢
+// ----------------------------------------------------------------------------
+function renderLibraryPage(container) {
+  container.innerHTML = `
+    <div class="breadcrumb"><span>現在位置：首頁 &gt; 圖書室館藏查詢</span><span>教學大樓 3F</span></div>
+    <h2 class="page-title">青禾國中圖書室 館藏與借閱狀態查詢</h2>
+
+    <div class="form-box">
+      <h4>館藏與借書證號檢索</h4>
+      <div style="display:flex; gap:8px; align-items:center;">
+        <input type="text" id="lib-query-input" placeholder="輸入書名、索書號或借書證號" style="width:230px;" onkeydown="if(event.key==='Enter') searchLibrary()">
+        <button onclick="searchLibrary()">查詢館藏</button>
+        <button onclick="renderCurrentPage()">顯示全部公開館藏</button>
+      </div>
+    </div>
+
+    <div id="lib-table-wrap">
+      ${renderLibraryTable(LIBRARY_BOOKS.filter(b => !b.hidden))}
+    </div>
+
+    <div class="info-box"><strong>館員備忘存檔：</strong><br>${renderDocLink("library_log")}</div>
+  `;
+}
+
+function renderLibraryTable(books) {
+  if (books.length === 0) return `<div class="warn-box">查無符合條件的館藏或借閱紀錄。</div>`;
+  return `
+    <table class="retro-table">
+      <tr><th>索書號</th><th>書名</th><th>作者</th><th>借閱狀態 / 登記證號</th></tr>
+      ${books.map(b => `
+        <tr style="${b.hidden ? 'background:#fff8f6;' : ''}">
+          <td><code>${b.callNo}</code></td>
+          <td><strong>${b.title}</strong></td>
+          <td>${b.author}</td>
+          <td>${b.status}<br><span style="font-size:12px; color:#555;">借書證號：${b.cardId} ${b.date ? `(${b.date})` : ""}</span></td>
+        </tr>
+      `).join("")}
+    </table>
+  `;
+}
+
+function searchLibrary() {
+  const q = (document.getElementById("lib-query-input").value || "").trim().toLowerCase();
+  const wrap = document.getElementById("lib-table-wrap");
+  if (!q) { wrap.innerHTML = renderLibraryTable(LIBRARY_BOOKS.filter(b => !b.hidden)); return; }
+
+  const matched = LIBRARY_BOOKS.filter(b =>
+    b.callNo.toLowerCase().includes(q) ||
+    b.title.toLowerCase().includes(q) ||
+    b.cardId.toLowerCase() === q
+  );
+  if (q === "2032") {
+    addClue({ id: "clue_lib_search_2032", text: "【館藏檢索】輸入證號 2032 調出了三筆離線手寫借書紀錄：《基礎鉛筆素描技法》、《如何交到好朋友》、《被遺忘的角落》。" });
+  }
+  wrap.innerHTML = renderLibraryTable(matched);
+}
+
+// ----------------------------------------------------------------------------
+// 互動單元 4：學務處與健康中心
+// ----------------------------------------------------------------------------
+function renderHealthCenterPage(container) {
+  container.innerHTML = `
+    <div class="breadcrumb"><span>現在位置：首頁 &gt; 學務處與健康中心</span><span>衛生組 / 輔導室聯合存檔</span></div>
+    <h2 class="page-title">學務處健康中心與學生輔導存檔</h2>
+
+    <table class="retro-table">
+      <tr><th>建檔日期</th><th>單位</th><th>檔案名稱</th><th>備註</th></tr>
+      <tr><td>2003/09/28</td><td>衛生組</td><td>${renderDocLink("lunch_menu")}</td><td>營養午餐與作息表</td></tr>
+      ${gameState.stage >= 3 ? `<tr><td>2003/10/13</td><td>輔導室</td><td>${renderDocLink("student_report_1013")}</td><td>203班異常反應談話紀錄</td></tr>` : ""}
+      ${gameState.stage >= 3 ? `<tr><td>2003/10/15</td><td>輔導室</td><td>${renderDocLink("counseling_note_1015")}</td><td>31號許佳蓉個案追蹤</td></tr>` : ""}
+      ${gameState.stage >= 4 ? `<tr style="background:#fff8f6;"><td>2003/09/30</td><td><span style="color:#990000;">健康中心(封存)</span></td><td>${renderDocLink("health_log_0918")}</td><td>92年9月份特殊傷病與校外事故月報</td></tr>` : ""}
+    </table>
+  `;
+}
+
+// ----------------------------------------------------------------------------
+// 互動單元 5：青禾師生留言板
+// ----------------------------------------------------------------------------
+function renderGuestbookPage(container) {
+  container.innerHTML = `
+    <div class="breadcrumb"><span>現在位置：首頁 &gt; 青禾師生留言板</span><span>校內師生交流園地</span></div>
+    <h2 class="page-title">青禾國中師生留言板</h2>
+
+    <div id="bbs-list">
+      ${gameState.bbsPosts.slice().reverse().map(p => `
+        <div class="bbs-post">
+          <div class="bbs-header"><span><strong>主旨：${p.title}</strong></span><span>張貼者：${p.author} ｜ ${p.date}</span></div>
+          <div class="bbs-body">${wrapName(p.body)}</div>
+        </div>
+      `).join("")}
+    </div>
+
+    <div class="form-box">
+      <h4>發表新留言</h4>
+      <div style="display:flex; gap:8px; margin-bottom:6px;">
+        <input type="text" id="bbs-author" placeholder="暱稱" style="width:150px;">
+        <input type="text" id="bbs-title" placeholder="留言主旨" style="flex:1;">
+      </div>
+      <textarea id="bbs-body" rows="3" placeholder="輸入留言內容..." style="width:100%; margin-bottom:6px;"></textarea>
+      <button onclick="submitBBSPost()">送出留言</button>
+    </div>
+  `;
+}
+
+function submitBBSPost() {
+  const author = (document.getElementById("bbs-author").value || "").trim() || "訪客";
+  const title = (document.getElementById("bbs-title").value || "").trim();
+  const body = (document.getElementById("bbs-body").value || "").trim();
+  if (!title || !body) { showRetroAlert("欄位未填寫", "請輸入留言主旨與內容。", true); return; }
+  gameState.bbsPosts.push({ id: Date.now(), author: author.replace(/</g,"&lt;"), date: getRealTimestamp().slice(0, 10), title: title.replace(/</g,"&lt;"), body: body.replace(/</g,"&lt;") });
+  saveGameState(); renderCurrentPage();
+}
+
+// ----------------------------------------------------------------------------
+// 互動單元 6：學生學籍查詢系統
+// ----------------------------------------------------------------------------
+function renderRosterPage(container) {
+  const checked = gameState.puzzles.rosterChecked;
+  const portalOpen = gameState.puzzles.studentPortalOpen;
+
+  container.innerHTML = `
+    <div class="breadcrumb"><span>現在位置：首頁 &gt; 學生學籍查詢</span><span>教務處註冊組資料庫</span></div>
+    <h2 class="page-title">92學年度 二年三班官方學生名冊查詢系統</h2>
+    <p>根據教務處註冊組 2003/10/18 更新之官方學籍資料，二年三班核定在籍學生共計 <strong>31 名</strong>（學號 2001 至 2031）。</p>
+
+    <div class="form-box">
+      <h4>一、學籍資料庫單筆檢索</h4>
+      <div style="display:flex; gap:8px; align-items:center; margin-top:6px;">
+        <label><strong>學生學號：</strong></label>
+        <input type="text" id="roster-id-input" maxlength="6" placeholder="輸入四碼學號" style="width:140px;" onkeydown="if(event.key==='Enter') executeRosterQuery()">
+        <button onclick="executeRosterQuery()">查詢</button>
+      </div>
+      <div id="roster-query-result" style="margin-top:12px;">
+        ${checked ? renderSolved2032Card() : ""}
+      </div>
+    </div>
+
+    <div class="form-box">
+      <h4>二、學生個人出缺席暨校安轉診紀錄查詢系統</h4>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:6px;">
+        <label>學號：<input type="text" id="portal-sid" maxlength="4" style="width:80px;"></label>
+        <label>出生月日 (MMDD)：<input type="text" id="portal-bday" maxlength="4" placeholder="四碼數字" style="width:85px;" onkeydown="if(event.key==='Enter') loginStudentPortal()"></label>
+        <button onclick="loginStudentPortal()">登入查詢個人紀錄</button>
+      </div>
+      ${portalOpen ? `
+        <div class="warn-box" style="margin-top:12px; margin-bottom:0;">
+          <strong>[學生個人系統快照 — 學號：2032 / 林以安（生日：08/14）]</strong><br>
+          ● <strong>92/09/01 ～ 92/09/18：</strong>每日早自習 07:10 到校，但導師點名表無此人欄位。<br>
+          ● <strong>92/09/18 16:30 校安通報草稿（未送出）：</strong>放學後於學府路一段遭超速白色貨車撞擊重傷，急送台中榮總加護病房。<br>
+          ● <strong>92/10/17 16:17 系統異常紀錄：</strong>電子點名系統第 32 欄出現未授權出席簽到（✓）。<br>
+          <div style="margin-top:8px;">關聯封存檔案已解除隱藏：${renderDocLink("health_log_0918")} ｜ ${renderDocLink("principal_directive_0919")}</div>
+        </div>
+      ` : ""}
+    </div>
+
+    <h3 style="font-size:15px; color:#1a3b6e; margin-top:16px;">二年三班官方在籍名冊一覽表（節錄）</h3>
+    <table class="retro-table" id="official-roster-table">
+      <tr><th>座號</th><th>學號</th><th>姓名</th><th>性別</th><th>幹部 / 備註</th></tr>
+      ${ROSTER_DATA.map(s => `<tr><td>${s.seat}</td><td>${s.id}</td><td>${s.name}</td><td>${s.gender}</td><td>${s.note}</td></tr>`).join("")}
+      <tr id="roster-end-row" style="background:#eee; color:#777;"><td colspan="5" style="text-align:center;">--- 名冊結束（共計 31 名學生） ---</td></tr>
+    </table>
+  `;
+
+  if (gameState.stage >= 3) {
+    setTimeout(() => {
+      const endRow = document.getElementById("roster-end-row");
+      if (endRow && gameState.currentPage === "roster") {
+        endRow.className = "intruder-row";
+        endRow.innerHTML = `<td>32</td><td>2032</td><td>林以安</td><td>男</td><td>最後一排靠窗（為什麼跳過我？）</td>`;
+        RetroAudio.playCreepyWhisperTone();
+        addSysLog("[DB_OVERRIDE] 表格列索引 0x2032 強制寫入畫面", "err");
+        setTimeout(() => {
+          if (document.getElementById("roster-end-row")) {
+            endRow.className = "";
+            endRow.innerHTML = `<td colspan="5" style="text-align:center;">--- 名冊結束（共計 31 名學生） ---</td>`;
+          }
+        }, 3800);
+      }
+    }, 2400);
+  }
+}
+
+function loginStudentPortal() {
+  const sid = (document.getElementById("portal-sid").value || "").trim();
+  const bday = (document.getElementById("portal-bday").value || "").trim();
+
+  if (sid === "2032" && bday === "0814") {
+    gameState.puzzles.studentPortalOpen = true;
+    addClue({ id: "clue_portal_0814", text: "【個人系統登入】以學號 2032 與生日 0814 登入學生個人查詢網，調出了 9/18 校門口車禍重傷送醫的完整紀錄！" });
+    checkProgression();
+    showRetroAlert("登入成功", "已調出學號 2032（林以安）之個人出缺席與校安轉診紀錄快照。");
+    renderCurrentPage();
+  } else {
+    showRetroAlert("驗證失敗", "學號或出生月日（MMDD）與學籍資料庫不符。", true);
+  }
+}
+
+function renderSolved2032Card() {
+  return `
+    <div class="warn-box" style="margin-bottom:0;">
+      <strong>[系統底層磁區殘留紀錄 — 索引位址 0x2032]</strong><br>
+      狀態：<span style="text-decoration:line-through;">已刪除 (DELETED BY ADMIN_XU ON 2003/10/18)</span><br>
+      班級：二年三班 ｜ 座號：<strong>32</strong> ｜ 學號：<strong>2032</strong> ｜ 姓名：<strong class="haunted-name">林以安</strong><br>
+      備註：入學編班原始流水號存在，但正式點名表與公開名冊欄位遭手動抹除。
+    </div>
+  `;
+}
+
+function executeRosterQuery() {
+  const input = document.getElementById("roster-id-input");
+  const resDiv = document.getElementById("roster-query-result");
+  const val = (input.value || "").trim();
+
+  if (!val) { showRetroAlert("查詢錯誤", "請先輸入欲查詢的學生學號。", true); return; }
+
+  if (val === "2032") {
+    resDiv.innerHTML = renderSolved2032Card();
+    if (!gameState.puzzles.rosterChecked) {
+      gameState.puzzles.rosterChecked = true;
+      addClue({ id: "clue_roster_deleted", text: "【學籍異常】在損毀磁區撈出已刪除的學號 2032：二年三班 32 號「林以安」，於 10/18 遭註冊組抹除。" });
+      addSysLog("警告：存取已刪除的學籍區塊 [2032 - 林以安]", "err");
+      checkProgression();
+      showRetroAlert("資料庫底層異常", "在未清空的舊索引磁區中，撈出了一筆遭強制刪除的學籍紀錄：<br><br><strong>學號 2032｜二年三班 32號｜林以安</strong><br><br><span style='font-size:12px; color:#555;'>（提示：欲查閱該生遭撤下的作文與導師隨筆，請參閱「校園行政公告」中的目錄遷移公告。）</span>");
+    }
+    return;
+  }
+
+  const found = ROSTER_DATA.find(s => s.id === val);
+  if (found) {
+    resDiv.innerHTML = `<div class="info-box" style="margin-bottom:0;"><strong>查詢結果：</strong>班級：二年三班 ｜ 座號：${found.seat} ｜ 學號：${found.id} ｜ 姓名：${found.name} ｜ 備註：${found.note || "無"}</div>`;
+  } else {
+    resDiv.innerHTML = `<div style="background:#eee; border:1px solid #999; padding:8px; font-size:13px;"><strong>查詢結果：</strong>查無學號「${val.replace(/</g,"&lt;")}」之在籍資料。</div>`;
+  }
+}
+
+// ----------------------------------------------------------------------------
+// 互動單元 7：二年三班班級網頁
+// ----------------------------------------------------------------------------
+function renderClass203Page(container) {
+  container.innerHTML = `
+    <div class="breadcrumb"><span>現在位置：首頁 &gt; 班級網頁 &gt; 二年三班</span><span>導師：陳志明</span></div>
+    <h2 class="page-title">二年三班 班級園地 — 「陽光、活力、203！」</h2>
+    <div class="info-box">本班共有學生 31 人。班訓：「每天進步一點點！」</div>
+
+    <h3 style="font-size:15px; color:#1a3b6e;">班級留存檔案</h3>
+    <table class="retro-table">
+      <tr><th>日期</th><th>文件名稱</th><th>說明</th></tr>
+      <tr><td>2003/10/02</td><td>${renderDocLink("class_diary_0915")}</td><td>31號許佳蓉同學週記</td></tr>
+      ${gameState.stage >= 3 ? `<tr><td>2003/10/13</td><td>${renderDocLink("student_report_1013")}</td><td>輔導室與班級異常反應談話紀錄</td></tr>` : ""}
+    </table>
+
+    <h3 style="font-size:15px; color:#1a3b6e; margin-top:16px;">教室座位配置表（面向黑板）</h3>
+    <div class="pixel-canvas-box">
+      <div style="background:#2e5a36; color:#fff; padding:4px; width:220px; margin:0 auto 10px auto; border:2px solid #8b5a2b; font-size:12px;">【 講 台 / 黑 板 】</div>
+      <div class="seat-grid">
+        <div class="seat-cell">01 王建宏</div><div class="seat-cell">02 李冠宇</div><div class="seat-cell">03 張哲維</div><div class="seat-cell">04 陳柏翰</div><div class="seat-cell">05 劉家豪</div><div class="seat-cell">06 趙子龍</div>
+        <div class="seat-cell">07 孫文博</div><div class="seat-cell">08 周柏宇</div><div class="seat-cell">09 吳宗憲</div><div class="seat-cell">10 鄭宇翔</div><div class="seat-cell">11 謝承翰</div><div class="seat-cell">12 郭冠廷</div>
+        <div class="seat-cell">13 曾柏霖</div><div class="seat-cell">14 張家瑋</div><div class="seat-cell">15 彭俊傑</div><div class="seat-cell">16 邱顯明</div><div class="seat-cell">17 廖偉哲</div><div class="seat-cell">18 黃子軒</div>
+        <div class="seat-cell">19 陳怡靜</div><div class="seat-cell">20 林雅筑</div><div class="seat-cell">21 張庭瑜</div><div class="seat-cell">22 吳雅婷</div><div class="seat-cell">23 李佳穎</div><div class="seat-cell">24 王詩涵</div>
+        <div class="seat-cell">25 林怡君</div><div class="seat-cell">26 蔡宜蓁</div><div class="seat-cell">27 楊惠如</div><div class="seat-cell">28 周欣怡</div><div class="seat-cell">29 林志豪</div><div class="seat-cell">30 蔡佩珊</div>
+        <div class="seat-cell empty-seat">清潔櫃</div><div class="seat-cell empty-seat">空位</div><div class="seat-cell empty-seat">空位</div><div class="seat-cell empty-seat">空位</div>
+        <div class="seat-cell" style="background:#eef4ff;">31 許佳蓉</div>
+        <div class="seat-cell ghost-seat">${gameState.stage >= 3 ? "32 林以安" : "空位"}</div>
+      </div>
+    </div>
+  `;
+}
+
+// ----------------------------------------------------------------------------
+// 互動單元 8：教職員工資料（含 DOM 修改器教學文件）
+// ----------------------------------------------------------------------------
+function renderTeachersPage(container) {
+  const tempVisited = Boolean(gameState.puzzles.tempDirVisited);
+  const stage3 = gameState.stage >= 3;
+  const stage4 = gameState.stage >= 4;
+
+  container.innerHTML = `
+    <div class="breadcrumb"><span>現在位置：首頁 &gt; 教職員工資料</span><span>教職員工名錄與存檔</span></div>
+    <h2 class="page-title">教職員工資料與導師留存檔案</h2>
+    <table class="retro-table">
+      <tr><th style="width:18%;">姓名</th><th style="width:22%;">職務 / 科目</th><th>公開簡介與留存檔案</th></tr>
+      <tr style="background:#fffdf2;">
+        <td><strong>陳志明</strong><br><span style="font-size:11px; color:#990000;">(已於 2003/11/03 離職)</span></td>
+        <td>二年三班 導師<br>（國文科）</td>
+        <td>
+          <div style="display:flex; flex-direction:column; gap:4px;">
+            ${tempVisited ? renderDocLink("teacher_memo_0925") : "<span style='color:#777;'>導師隨筆_20030925.txt（已移至保留目錄 /temp_old/）</span>"}
+            ${stage3 ? renderDocLink("teacher_memo_1010") : "<span style='color:#777;'>導師日誌_20031010_抹不掉的字.txt（權限不足）</span>"}
+            ${stage3 ? renderDocLink("attendance_scan") : "<span style='color:#777;'>203班_原始點名表_備份.xls（權限不足）</span>"}
+            ${stage4 ? renderDocLink("teacher_memo_1016") : "<span style='color:#777;'>導師私密草稿_20031016_別過來.txt（權限不足）</span>"}
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>許美玲</strong></td><td>教務處註冊組幹事</td>
+        <td>負責全校學生學籍登錄與轉學異動業務。<br>${stage4 ? renderDocLink("registrar_email") : "<span style='color:#777;'>註冊組內部便箋_1018.txt（內部文件）</span>"}</td>
+      </tr>
+      <tr>
+        <td><strong>周文傑</strong></td><td>資訊組長 / 網管</td>
+        <td>負責校務主機與網頁伺服器維護。
+          <div style="display:flex; flex-direction:column; gap:4px; margin-top:4px;">
+            ${stage4 ? renderDocLink("dom_hack_tutorial") : ""}
+            ${stage4 ? renderDocLink("server_audit_log") : "<span style='color:#777;'>資訊機房系統稽核日誌_20031018.log（內部文件）</span>"}
+          </div>
+        </td>
+      </tr>
+    </table>
+  `;
+}
+
+// ----------------------------------------------------------------------------
+// 互動單元 9：網站管理區（真結局按鈕預設 disabled 鎖定，需用 DOM 修改器解鎖）
+// ----------------------------------------------------------------------------
+function renderAdminPage(container) {
+  const loggedIn = Boolean(gameState.puzzles.adminLoggedIn);
+  const buttonUnlocked = Boolean(gameState.puzzles.adminButtonUnlocked);
+  const formatAborted = Boolean(gameState.puzzles.formatAborted);
+
+  if (!loggedIn) {
+    container.innerHTML = `
+      <div class="breadcrumb"><span>現在位置：首頁 &gt; 網站管理區</span><span>RESTRICTED AREA</span></div>
+      <h2 class="page-title">青禾國中網站管理員備份登入</h2>
+      <div class="warn-box"><strong>警告：</strong>此區域為資訊組加密備份目錄，未經授權請勿嘗試登入。</div>
+      <div class="form-box" style="max-width:440px; margin:20px auto;">
+        <h4>備份目錄存取驗證</h4>
+        <div style="margin:10px 0;"><label>管理帳號：</label><input type="text" value="admin_chou" disabled style="background:#ddd; width:160px;"></div>
+        <div style="margin:10px 0;">
+          <label>存取密碼：</label>
+          <input type="password" id="admin-pass" maxlength="8" style="width:160px;" onkeydown="if(event.key==='Enter') verifyAdminLogin()">
+          <button onclick="verifyAdminLogin()" style="margin-left:6px;">登入</button>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = `
+    <div class="breadcrumb"><span>現在位置：首頁 &gt; 網站管理區 &gt; /backup_2032/</span><span style="color:#990000; font-weight:bold;">SESSION: 2003-10-17 16:17</span></div>
+    <h2 class="page-title">封存備份目錄：/backup_2032/</h2>
+    <div class="warn-box"><strong>[系統異常警告]</strong> 偵測到 2003 年 10 月 17 日 16:17 未完成的點名程序仍在背景執行。<br><em>「老師每次唸到 31 號就會把點名簿合起來……我一直在最後一排等著……」</em></div>
+
+    <table class="retro-table">
+      <tr><th>封存檔案名稱</th><th>檔案類型</th><th>原始建檔時間</th></tr>
+      <tr><td>${renderDocLink("attendance_scan")}</td><td>點名表掃描存檔</td><td>2003/10/17 16:35</td></tr>
+      <tr><td>${renderDocLink("sketchbook_scan")}</td><td>遺留物文字轉錄</td><td>2003/10/18 09:12</td></tr>
+      <tr><td>${renderDocLink("dom_hack_tutorial")}</td><td>資訊組前端維護講義</td><td>2003/09/15 14:20</td></tr>
+    </table>
+
+    <div class="form-box" style="border:2px solid #990000; background:#f3ecec; margin-top:16px;">
+      <h4 style="color:#990000;">二年三班 點名系統待處理序列（2003/10/17 16:17）</h4>
+      ${!buttonUnlocked && formatAborted ? `
+        <div style="background:#fff0f0; border:1px dashed #990000; padding:8px; margin-bottom:10px; font-size:12.5px; color:#800000;">
+          <strong>[前端表單行政鎖定中]</strong> 註冊組已對「補登學籍並確認出席」按鈕寫入 <code>disabled</code> 與 <code>data-lock="true"</code> 屬性。<br>
+          請開啟上方 IE 工具列的 <strong>「網頁除錯控制台 / DOM 屬性修改器」</strong> 解除按鈕鎖定（操作步驟請參閱資訊組教學講義）。
+        </div>
+      ` : ""}
+      ${buttonUnlocked ? `
+        <div style="background:#eef7ee; border:1px solid #2e7d32; padding:8px; margin-bottom:10px; font-size:12.5px; color:#1b5e20;">
+          <strong>✔ [DOM 屬性覆寫完成]</strong> 表單鎖定已解除，現在可以執行學籍補登與第七次點名！
+        </div>
+      ` : ""}
+      <div style="background:#fff; border:1px solid #888; padding:12px; margin:10px 0;">
+        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:12px;">
+          <label>座號：<input type="text" value="32" readonly style="width:45px; background:#eee;"></label>
+          <label>學號：<input type="text" id="final-id" maxlength="4" style="width:80px;"></label>
+          <label>姓名：<input type="text" id="final-name" maxlength="6" style="width:110px;"></label>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <button id="btn-true-end" ${buttonUnlocked ? "" : "disabled"} onclick="triggerTrueEnding()" style="background:#1a3b6e; color:#fff; font-weight:bold; padding:5px 14px;">✔ 補登學籍並確認出席（完成第七次點名）</button>
+          <button onclick="openLinPleaModal()" style="background:#7a1c1c; color:#fff; padding:5px 14px;">✕ 執行磁區格式化並徹底清除異常</button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function verifyAdminLogin() {
+  const pwd = (document.getElementById("admin-pass").value || "").trim();
+  if (pwd === "10171617") {
+    gameState.puzzles.adminLoggedIn = true;
+    addClue({ id: "clue_admin_login", text: "【備份目錄】成功登入密碼保護的 /backup_2032/ 目錄，發現補登按鈕被前端屬性鎖定。" });
+    checkProgression();
+    renderCurrentPage();
+    showRetroAlert("登入成功", "密碼驗證通過，已掛載隱藏備份目錄 /backup_2032/ 並載入點名序列。");
+  } else {
+    showRetroAlert("存取拒絕", "密碼錯誤。", true);
+  }
+}
+
+// ----------------------------------------------------------------------------
+// 站內全文檢索（嚴格遵守 gameState.stage 權限與假網址必經門檻）
+// ----------------------------------------------------------------------------
+function runGlobalSearch() {
+  const q = (document.getElementById("global-search-input").value || "").trim();
+  if (!q) { showRetroAlert("搜尋提示", "請輸入要檢索的關鍵字。"); return; }
+  gameState.lastSearchQuery = q; navigateTo("search_results");
+}
+
+function renderSearchResultsPage(container) {
+  const q = (gameState.lastSearchQuery || "").trim();
+  const qLower = q.toLowerCase();
+
+  const matchedDocs = Object.values(DOCUMENTS).filter(d => {
+    if ((d.minStage || 1) > gameState.stage) return false;
+    // 屬於 /temp_old/ 的檔案，必須先透過假網址造訪該目錄後才可被索引檢索
+    if (d.requiresTempDir && !gameState.puzzles.tempDirVisited) return false;
+    const hay = (d.filename + d.title + d.author + d.content).toLowerCase();
+    return hay.includes(qLower);
+  });
+
+  container.innerHTML = `
+    <div class="breadcrumb"><span>現在位置：首頁 &gt; 站內全文檢索</span><span>關鍵字：「${q.replace(/</g,"&lt;")}」</span></div>
+    <h2 class="page-title">伺服器硬碟全文檢索結果：「${q.replace(/</g,"&lt;")}」</h2>
+    <table class="retro-table">
+      <tr><th>檔案名稱</th><th>標題</th><th>目錄分類</th></tr>
+      ${matchedDocs.length > 0 ? matchedDocs.map(d => `<tr><td>${renderDocLink(d.id)}</td><td>${wrapName(d.title)}</td><td>${d.category}</td></tr>`).join("") : "<tr><td colspan='3'>查無符合當前系統權限的公開或已掛載檔案。</td></tr>"}
+    </table>
+  `;
+}
+
+// ============================================================================
+// ★ 震撼雙結局觸發引擎 ★
+// ============================================================================
+function openLinPleaModal() {
+  RetroAudio.playCreepyWhisperTone();
+  addSysLog("[INTERRUPT] 磁區格式化程序遭未知行程攔截 (0x2032)", "err");
+  document.getElementById("lin-plea-backdrop").style.display = "flex";
+}
+
+function confirmFormatBadEnding() {
+  document.getElementById("lin-plea-backdrop").style.display = "none";
+  triggerNormalEnding();
+}
+
+function abortFormatAndShowHint() {
+  document.getElementById("lin-plea-backdrop").style.display = "none";
+  gameState.puzzles.formatAborted = true;
+  addSysLog("[SYSTEM] 格式化已中止。偵測到前端表單存在行政權限鎖定。", "warn");
+  saveGameState();
+  renderCurrentPage();
+}
+function triggerNormalEnding() {
+  gameState.endingReached = "normal";
+  saveGameState();
+  RetroAudio.playBadEndingSound();
+
+  document.body.classList.add("violent-glitch");
+  const titleEl = document.querySelector(".school-title h1");
+  if (titleEl) titleEl.textContent = "查 無 此 人 國 民 中 學";
+  const marqueeEl = document.getElementById("marquee-content");
+  if (marqueeEl) {
+    marqueeEl.style.color = "#ff0000";
+    marqueeEl.textContent = "★ 錯誤：磁區 0x2032 已格式化 ★ 二年三班只有 31 個人 ★ 你為什麼要假裝沒看見我？ ★";
+  }
+
+  setTimeout(() => {
+    document.body.classList.remove("violent-glitch");
+    const overlay = document.getElementById("ending-overlay");
+    overlay.className = "ending-bad";
+    document.getElementById("ending-content").innerHTML = `
+      <div class="bad-ending-box">
+        <div style="color:#ff4d4d; font-family:'Courier New', monospace; font-size:12px; margin-bottom:8px;">
+          [SYSTEM FATAL ERROR // SECTOR 0x2032 WIPED — 0 BYTES REMAINING]
+        </div>
+        <h2 class="bad-glitch-title">BAD END：被遺忘的第三十二個座位</h2>
+
+        <p class="fade-in-line" style="animation-delay:0.2s;">
+          你按下了「執行磁區格式化並徹底清除異常」。硬碟發出一陣刺耳的電流嘶鳴，所有關於學號 <code>2032</code> 的殘留快取、素描本掃描檔與點名紀錄，在不到一秒內化為無意義的 <code>0x00</code> 歸零。
+        </p>
+
+        <p class="fade-in-line" style="animation-delay:0.8s;">
+          青禾國中 2003 年的存檔網站變得無比乾淨、無比正常，就像校長室與註冊組當初在密會上所決議的那樣——沒有任何行政疏失，沒有任何漏排導護的校門口車禍，加護病房裡沒有那台孤零零運轉的呼吸器，二年三班從頭到尾都只有 31 名學生。
+        </p>
+
+        <div class="ghost-whisper-wall fade-in-line" style="animation-delay:1.4s;">
+          「30號，蔡佩珊。」「有。」<br>
+          「31號，許佳蓉。」「有。」<br>
+          <span style="color:#888;">（點名簿合起來的聲音）</span><br><br>
+          <strong>「……老師，還有我啊。我把大家的背影都畫好了，橡皮擦也準備好了……為什麼連你也要把我刪掉？」</strong>
+        </div>
+
+        <p class="fade-in-line" style="animation-delay:2.0s; color:#c8bebe;">
+          你關掉了瀏覽器視窗。只是從那天起，每當下午時鐘走到 <strong>16:17</strong>、夕陽把房間拉出長長斜影時，你總會感覺到身後空無一人的角落，傳來一陣極輕、極慢的鉛筆沙沙聲——有人正貼著地板仰望著你，等著你回頭叫出他的名字。
+        </p>
+
+        <div style="margin-top:26px; padding-top:16px; border-top:1px dashed #660000; display:flex; gap:12px; justify-content:space-between; align-items:center;">
+          <span style="font-size:12px; color:#888;">結局達成 1 / 2：抹除者</span>
+          <div style="display:flex; gap:10px;">
+            <button onclick="document.getElementById('ending-overlay').style.display='none'">檢視被清空的網頁</button>
+            <button onclick="confirmResetGame()" style="background:#5c0000; color:#fff;">重新來過</button>
+          </div>
+        </div>
+      </div>
+    `;
+    overlay.style.display = "block";
+  }, 1100);
+}
+
+function triggerTrueEnding() {
+  if (!gameState.puzzles.adminButtonUnlocked) {
+    showRetroAlert("行政鎖定未解除", "該按鈕仍受前端屬性鎖定，請先透過網頁除錯控制台解除鎖定。", true);
+    return;
+  }
+  const sid = (document.getElementById("final-id").value || "").trim();
+  const sname = (document.getElementById("final-name").value || "").trim();
+  if (sid !== "2032" || sname !== "林以安") {
+    showRetroAlert("點名資料不完整", "請在欄位中正確輸入被抹除的學號與學生姓名。", true);
+    return;
+  }
+
+  gameState.endingReached = "true";
+  saveGameState();
+  RetroAudio.playSchoolChime();
+
+  document.body.className = "stage-1";
+  document.title = "台中縣立青禾國民中學 全球資訊網 - 2003年度存檔";
+  const marqueeEl = document.getElementById("marquee-content");
+  if (marqueeEl) {
+    marqueeEl.style.color = "#1a3b6e";
+    marqueeEl.textContent = "★ 92學年度二年三班全體學生（共 32 名）點名完畢 ★ 歡迎光臨青禾國中全球資訊網！ ★";
+  }
+
+  const overlay = document.getElementById("ending-overlay");
+  overlay.className = "ending-true";
+  document.getElementById("ending-content").innerHTML = `
+    <div class="true-ending-box">
+      <div style="color:#2e7d32; font-family:'Courier New', monospace; font-weight:bold; font-size:12px; margin-bottom:8px;">
+        [ARCHIVE RESTORED // 第七次點名完成 — 2003/10/17 16:17 → 2026]
+      </div>
+      <h2 class="true-ending-title">TRUE END：遲到了二十三年的「有」</h2>
+
+      <p class="fade-in-line" style="animation-delay:0.2s;">
+        你透過除錯控制台覆寫了註冊組設下的前端鎖定，在點名系統空白的第 32 欄敲下了 <strong>「2032 — 林以安」</strong>，並按下了確認出席。
+      </p>
+
+      <p class="fade-in-line" style="animation-delay:0.7s;">
+        伴隨著一陣清脆的模擬放學鐘聲，螢幕上糾纏已久的暗紅色雜訊如潮水般退去。那些被撕毀的轉學存根、被鎖在地下室的課桌刻痕、以及陳志明老師寫滿悔恨的點名簿，在數位光影中重新拼湊完整。
+      </p>
+
+      <div class="roll-call-receipt fade-in-line" style="animation-delay:1.3s;">
+        <div style="border-bottom:1px dashed #666; padding-bottom:6px; margin-bottom:8px; font-weight:bold; color:#1a3b6e;">
+          台中縣立青禾國民中學 二年三班 正式出席核定單
+        </div>
+        <div>30 ｜ 2030 ｜ 蔡佩珊 ｜ 出席 [✓]</div>
+        <div>31 ｜ 2031 ｜ 許佳蓉 ｜ 出席 [✓]</div>
+        <div style="background:#eef7ee; color:#1b5e20; font-weight:bold; padding:3px 4px; margin-top:4px; border-left:3px solid #2e7d32;">
+          32 ｜ 2032 ｜ 林以安 ｜ 出席 [✓] （已補登正式學籍）
+        </div>
+      </div>
+
+      <blockquote class="fade-in-line" style="animation-delay:1.9s; border-left:4px solid #2e7d32; background:#f2f7f2; padding:12px 16px; color:#1b3b2b; margin:16px 0;">
+        「31號，許佳蓉。」<br>
+        「……32號，林以安。」<br><br>
+        教室最後一排靠窗的夕陽裡，穿著泛白舊襯衫的少年抬起頭，臉上露出了轉學以來第一個燦爛的笑容：<br>
+        <strong style="font-size:16px;">「有！老師，我在這裡！」</strong><br>
+        <span style="font-size:13px; color:#444;">「謝謝你叫了我的名字。這樣一來，我就真的來過二年三班，不會再被忘記了。」</span>
+      </blockquote>
+
+      <p class="fade-in-line" style="animation-delay:2.5s;">
+        檔案庫的最深處自動釋出了一張從未曝光的掃描圖檔——那是藍色素描本的最後一頁。畫裡不再只有同學們孤單的背影，而是二年三班全體 32 個人轉過頭來，對著最後一排靠窗的座位微笑揮手的模樣。
+      </p>
+
+      <div style="margin-top:26px; padding-top:16px; border-top:1px dashed #999; display:flex; gap:12px; justify-content:space-between; align-items:center;">
+        <span style="font-size:12px; color:#2e7d32; font-weight:bold;">結局達成 2 / 2：第七次點名（全班 32 人，全員到齊）</span>
+        <div style="display:flex; gap:10px;">
+          <button onclick="document.getElementById('ending-overlay').style.display='none'">返回瀏覽存檔網站</button>
+          <button onclick="confirmResetGame()">重置快照</button>
+        </div>
+      </div>
+    </div>
+  `;
+  overlay.style.display = "block";
+}
+
+/* ============================================================================
+   ★ 完整保留：全部支線彩蛋與純網頁文本靈異彩蛋模組 ★
+   ============================================================================ */
+
+const originalRunGlobalSearch = runGlobalSearch;
+runGlobalSearch = function() {
+  const q = (document.getElementById("global-search-input").value || "").trim();
+  const easterEggs = {
+    "周杰倫": {
+      title: "訓育組違禁品查扣通報",
+      msg: "【2003/10/08 朝會宣導】近日查獲多名同學於午休時間偷聽《葉惠美》專輯 CD 隨身聽，並將耳機線藏在制服袖子裡。依校規記警告乙次，CD 暫由生教組代管至學期末！"
+    },
+    "SARS": {
+      title: "衛生組防疫存檔紀錄",
+      msg: "【2003/05/20 存檔】雖然上半年疫情已趨緩，但每日早自習前仍請衛生股長確實使用耳溫槍替全班量測體溫，超過 37.5 度者請立即至健康中心領取口罩。"
+    },
+    "福利社": {
+      title: "員生消費合作社熱銷排行",
+      msg: "本週合作社銷售冠軍：1. 蘋果麵包（10元）、2. 麥香紅茶鋁箔包（10元）、3. 科學麵（8元）。<br>※ 備註：下課鐘響後五分鐘內嚴禁奔跑衝撞鐵捲門。"
+    },
+    "小黑": {
+      title: "工友室秘密備忘錄",
+      msg: "校狗「小黑」上週又把福利社阿姨的便當叼走了，還順便把總務主任放在辦公室桌上的假牙咬去操場埋起來。請同學不要再拿營養午餐的雞腿餵牠了！"
+    },
+    "愛情": {
+      title: "輔導室心理測驗小語",
+      msg: "【心理測驗】想知道他／她喜不喜歡你嗎？把你們兩個人的名字筆劃相加除以 2……算了，段考快到了，請先關心你的數學及格率。"
+    }
+  };
+  if (easterEggs[q]) {
+    addSysLog(`觸發隱藏彩蛋關鍵字：「${q}」`, "warn");
+    showRetroAlert(easterEggs[q].title, easterEggs[q].msg);
+    return;
+  }
+  originalRunGlobalSearch();
+};
+
+let emblemClickCount = 0;
+document.addEventListener("DOMContentLoaded", () => {
+  const emblem = document.querySelector(".school-emblem");
+  if (emblem) {
+    emblem.style.cursor = "pointer";
+    emblem.addEventListener("click", () => {
+      emblemClickCount++;
+      if (emblemClickCount === 5) {
+        emblemClickCount = 0;
+        addSysLog("觸發隱藏彩蛋：資訊組長的深夜碎念", "warn");
+        showRetroAlert(
+          "隱藏檔案：admin_diary_2003.txt",
+          "<strong>資訊組 周文傑 的私密筆記：</strong><br><br>「全校 40 台電腦都用 Windows 98 跟 XP，教務主任昨天又把滑鼠滾輪裡面的灰塵當成中毒叫我去修……月薪才三萬多，還要兼管網頁伺服器，下輩子絕對不當學校網管了。」"
+        );
+      }
+    });
+  }
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target && e.target.classList.contains("seat-cell")) {
+    const text = e.target.textContent.trim();
+    if (text.includes("06 趙子龍")) {
+      showRetroAlert("桌肚裡的漫畫書", "在趙子龍的抽屜深處發現一本包著國文課本書皮的《七龍珠》單行本，旁邊還有一張沒寫完的數學罰寫。");
+    } else if (text.includes("22 吳雅婷")) {
+      showRetroAlert("折成愛心的紙條", "班長吳雅婷的鉛筆盒底下壓著一張粉色信紙，上面用立可白寫著：「給 14 號張家瑋：下週園遊會要不要一起逛鬼屋？勿回。」");
+    } else if (text.includes("04 陳柏翰")) {
+      showRetroAlert("桌角刻字", "課桌右下角用美工刀刻著一行字：「2003 暑假永遠的兄弟！制霸青禾籃球場！」");
+    } else if (text.includes("11 謝承翰")) {
+      showRetroAlert("一封信件", "信上貼著一張愛心貼紙，還是不要亂撕開好了。");
+    }
+  }
+});
+
+let pageNavCount = 0;
+let ieHomepageAsked = false;
+
+const originalNavigateTo = navigateTo;
+navigateTo = function(pageId) {
+  originalNavigateTo(pageId);
+  pageNavCount++;
+
+  const campusBroadcasts = [
+    "【校園廣播】請各班抬餐同學聽到鐘響後，準時至中央廚房領取今日營養午餐。",
+    "【訓育組廣播】二年五班張同學，你的便當盒掉在合作社門口，請速至學務處領回。",
+    "【衛生組廣播】現在是全校潔牙時間，請各班風紀股長協助督導同學使用含氟漱口水。",
+    "【教務處廣播】段考將近，圖書室晚自習開放至晚間八點，請有登記的同學準時入座。",
+    "【生教組廣播】放學後請勿在學校圍牆邊逗留購買路邊攤販食品，注意交通安全。"
+  ];
+
+  if (Math.random() < 0.25) {
+    const msg = campusBroadcasts[Math.floor(Math.random() * campusBroadcasts.length)];
+    addSysLog(msg, "normal");
+    const marquee = document.getElementById("marquee-content");
+    if (marquee) marquee.textContent = `★ ${msg} ★ 歡迎光臨青禾國中全球資訊網！`;
+  }
+
+  if (pageNavCount === 6 && !ieHomepageAsked) {
+    ieHomepageAsked = true;
+    setTimeout(() => {
+      showRetroAlert(
+        "Internet Explorer 提示",
+        "您已經瀏覽本校網站多次，是否要將 <strong>http://www.chjh.tcc.edu.tw/</strong> 設為您的瀏覽器首頁？<br><br><span style='font-size:12px; color:#666;'>（註：此為 2003 年網頁存檔之殘留腳本視窗）</span>"
+      );
+    }, 800);
+  }
+
+  if (pageId === "guestbook" && !gameState.bbsLiveTriggered) {
+    gameState.bbsLiveTriggered = true;
+    setTimeout(() => {
+      if (gameState.currentPage === "guestbook") {
+        gameState.bbsPosts.push({
+          id: Date.now(),
+          author: "203班 14號張家瑋",
+          date: "2003/11/12 12:35",
+          title: "誰有帶明天的地理習作？借我抄一下第12頁！",
+          body: "急！！午休前沒交出去下午又要被地理老師罰站了，有帶的人快點在下面回我，下午請喝麥香奶茶！"
+        });
+        addSysLog("收到新留言封包：來自校內電腦教室 IP (163.17.xx.xx)", "warn");
+        renderCurrentPage();
+      }
+    }, 7000);
+  }
+};
+
+let idleTimer = null;
+let eyeCareShown = false;
+function resetIdleTimer() {
+  clearTimeout(idleTimer);
+  idleTimer = setTimeout(() => {
+    if (!eyeCareShown && document.getElementById("ending-overlay").style.display !== "block") {
+      eyeCareShown = true;
+      addSysLog("觸發閒置保護程式：視力保健宣導", "normal");
+      showRetroAlert(
+        "教育部視力保健宣導小天使",
+        "<strong>同學，你已經盯著 CRT 螢幕看很久囉！</strong><br><br>請記得保持眼睛與螢幕 45 公分以上的距離，每用眼 30 分鐘請休息 10 分鐘，看看窗外的綠色植物喔！"
+      );
+    }
+  }, 45000);
+}
+["mousemove", "keydown", "click", "scroll"].forEach(evt => window.addEventListener(evt, resetIdleTimer, { passive: true }));
+resetIdleTimer();
+
+setTimeout(() => {
+  addSysLog("[HARDWARE] 偵測到 PS/2 滾輪滑鼠 Y 軸感應微幅卡頓，建議清理內部灰塵。", "normal");
+}, 25000);
+
+let horrorCooldown = false;
+function triggerSubtleGlitch() {
+  document.body.style.filter = "contrast(1.35) brightness(0.88) hue-rotate(-8deg)";
+  setTimeout(() => { document.body.style.filter = ""; }, 280);
+}
+
+let selectEggTriggered = false;
+document.addEventListener("mouseup", () => {
+  const selectedText = window.getSelection().toString().trim();
+  if (selectedText.length >= 2 && !selectEggTriggered && !horrorCooldown && gameState.stage >= 2) {
+    selectEggTriggered = true;
+    horrorCooldown = true;
+    triggerSubtleGlitch();
+    addSysLog("……不要用橡皮擦……擦不掉的……", "err");
+    setTimeout(() => { horrorCooldown = false; }, 15000);
+  }
+});
+
+const originalOpenDocument = openDocument;
+openDocument = function(docId) {
+  originalOpenDocument(docId);
+  setTimeout(() => {
+    const modal = document.getElementById("doc-modal-backdrop");
+    if (modal && modal.style.display === "flex" && !horrorCooldown && gameState.stage >= 2) {
+      horrorCooldown = true;
+      const marquee = document.getElementById("marquee-content");
+      if (marquee) {
+        const oldText = marquee.textContent;
+        marquee.style.color = "#990000";
+        marquee.style.fontWeight = "bold";
+        marquee.textContent = "你看得見這行字嗎？……教室最後一排好冷，你可以幫我跟老師說我有來上課嗎？……";
+        addSysLog("[MEMORY_LEAK] 讀取到未釋放的字串指標 0x2032", "err");
+        setTimeout(() => {
+          marquee.style.color = "";
+          marquee.style.fontWeight = "";
+          marquee.textContent = oldText;
+          horrorCooldown = false;
+        }, 6500);
+      }
+    }
+  }, 14000);
+};
+
+let ghostTypingDone = false;
+let counterGlitchDone = false;
+
+const prevNavigateTo = navigateTo;
+navigateTo = function(pageId) {
+  prevNavigateTo(pageId);
+
+  if (pageId === "guestbook" && !ghostTypingDone && gameState.stage >= 2) {
+    ghostTypingDone = true;
+    setTimeout(() => {
+      const textarea = document.getElementById("bbs-body");
+      if (textarea && gameState.currentPage === "guestbook" && textarea.value === "") {
+        const ghostMsg = "老師，我坐在最後一排靠窗的地方，今天是第幾次點名了？";
+        let idx = 0;
+        addSysLog("[INPUT_HOOK] 偵測到遠端鍵盤訊號注入...", "err");
+        const typeInterval = setInterval(() => {
+          if (!document.getElementById("bbs-body")) { clearInterval(typeInterval); return; }
+          textarea.value += ghostMsg[idx];
+          idx++;
+          if (idx >= ghostMsg.length) {
+            clearInterval(typeInterval);
+            setTimeout(() => {
+              if (document.getElementById("bbs-body")) {
+                textarea.value = "";
+                triggerSubtleGlitch();
+              }
+            }, 1500);
+          }
+        }, 120);
+      }
+    }, 3500);
+  }
+
+  if (!counterGlitchDone && gameState.stage >= 2 && Math.random() < 0.3) {
+    counterGlitchDone = true;
+    const counterEl = document.getElementById("visitor-counter");
+    if (counterEl) {
+      const realVal = counterEl.textContent;
+      counterEl.style.color = "#ff3333";
+      counterEl.textContent = "000032";
+      triggerSubtleGlitch();
+      addSysLog("[WARNING] 偵測到異常工作階段連線 (座位代碼: 203-32)", "err");
+      setTimeout(() => {
+        counterEl.style.color = "#33ff33";
+        counterEl.textContent = realVal;
+      }, 3000);
+    }
+  }
+};
+
+// Stage 3 純文本與分頁標題靈異演出
+setInterval(() => {
+  if (gameState.stage >= 3 && Math.random() < 0.25 && !horrorCooldown) {
+    const dateEl = document.getElementById("header-sys-date");
+    const origTitle = document.title;
+    document.title = "(1) 新訊息：林以安 - 為什麼不叫我的名字";
+    if (dateEl) {
+      const origDate = dateEl.textContent;
+      dateEl.style.color = "#ff6666";
+      dateEl.textContent = "中華民國 92 年 10 月 17 日 16:17";
+      setTimeout(() => {
+        dateEl.style.color = "";
+        dateEl.textContent = origDate;
+        document.title = origTitle;
+      }, 2400);
+    }
+  }
+}, 18000);
+
+window.addEventListener("DOMContentLoaded", () => {
+  gameState.visitorCount += 1;
+  document.getElementById("visitor-counter").textContent = String(gameState.visitorCount).padStart(6, "0");
+  saveGameState(); updateAllUI(); navigateTo("home");
+});
+</script>
+</body>
+</html>
