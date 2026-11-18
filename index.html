@@ -941,6 +941,7 @@ const DOCUMENTS = {
   "health_log_0918": {
     id: "health_log_0918", filename: "健康中心傷病處理月報_9209.doc", title: "學務處衛生組暨健康中心 92年9月份傷病與轉診登記",
     author: "護理師 劉雅惠", date: "2003/09/30", category: "學務處與健康中心", minStage: 4,
+    requiresPortal: true,
     content: `
       <p><strong>【92年9月份特殊傷病與校外事故備註】</strong><br>
       92年9月18日 下午 <strong>16:30</strong> 接獲青禾派出所通報：一名身著本校夏季制服（未繡學號、書包內夾有二年三班課表影本及寫有「林以安」字樣之作業本）之少年，於校門外<strong>學府路</strong>一段路口（當時號誌故障，且無導護老師執勤）遭超速白色小貨車撞擊彈飛，顱內出血重度昏迷，緊急轉送<strong>台中榮總</strong>加護病房搶救。<br>
@@ -1828,6 +1829,8 @@ function searchLibrary() {
 // 互動單元 4：學務處與健康中心
 // ----------------------------------------------------------------------------
 function renderHealthCenterPage(container) {
+  const canViewSealed = Boolean(gameState.puzzles.studentPortalOpen && gameState.stage >= 4);
+
   container.innerHTML = `
     <div class="breadcrumb"><span>現在位置：首頁 &gt; 學務處與健康中心</span><span>衛生組 / 輔導室聯合存檔</span></div>
     <h2 class="page-title">學務處健康中心與學生輔導存檔</h2>
@@ -1837,11 +1840,13 @@ function renderHealthCenterPage(container) {
       <tr><td>2003/09/28</td><td>衛生組</td><td>${renderDocLink("lunch_menu")}</td><td>營養午餐與作息表</td></tr>
       ${gameState.stage >= 3 ? `<tr><td>2003/10/13</td><td>輔導室</td><td>${renderDocLink("student_report_1013")}</td><td>203班異常反應談話紀錄</td></tr>` : ""}
       ${gameState.stage >= 3 ? `<tr><td>2003/10/15</td><td>輔導室</td><td>${renderDocLink("counseling_note_1015")}</td><td>31號許佳蓉個案追蹤</td></tr>` : ""}
-      ${gameState.stage >= 4 ? `<tr style="background:#fff8f6;"><td>2003/09/30</td><td><span style="color:#990000;">健康中心(封存)</span></td><td>${renderDocLink("health_log_0918")}</td><td>92年9月份特殊傷病與校外事故月報</td></tr>` : ""}
+      ${canViewSealed
+        ? `<tr style="background:#fff8f6;"><td>2003/09/30</td><td><span style="color:#990000;">健康中心(封存)</span></td><td>${renderDocLink("health_log_0918")}</td><td>92年9月份特殊傷病與校外事故月報</td></tr>`
+        : `<tr><td>2003/09/30</td><td>衛生組</td><td style="color:#888;">健康中心傷病處理月報_9209.doc（需登入學生個人轉診系統驗證後調閱）</td><td style="color:#888;">權限鎖定</td></tr>`
+      }
     </table>
   `;
 }
-
 // ----------------------------------------------------------------------------
 // 互動單元 5：青禾師生留言板
 // ----------------------------------------------------------------------------
@@ -1953,11 +1958,21 @@ function loginStudentPortal() {
   const sid = (document.getElementById("portal-sid").value || "").trim();
   const bday = (document.getElementById("portal-bday").value || "").trim();
 
+  // 防止前期拿到 0814 就直接跳關到 Stage 4
+  if (!gameState.puzzles.rosterChecked || !gameState.puzzles.tempDirVisited || !gameState.puzzles.deskVerified) {
+    showRetroAlert(
+      "系統權限不足（Error 403）",
+      "該生學籍磁區目前處於「未掛載／封存異常」狀態，個人出缺席系統無法讀取索引。<br><br><span style='font-size:12px; color:#555;'>（提示：請先依序查明學籍磁區 2032、調閱保留目錄 /temp_old/ 存檔，並至總務處確認課桌椅移轉單據。）</span>",
+      true
+    );
+    return;
+  }
+
   if (sid === "2032" && bday === "0814") {
     gameState.puzzles.studentPortalOpen = true;
     addClue({ id: "clue_portal_0814", text: "【個人系統登入】以學號 2032 與生日 0814 登入學生個人查詢網，調出了 9/18 校門口車禍重傷送醫的完整紀錄！" });
     checkProgression();
-    showRetroAlert("登入成功", "已調出學號 2032（林以安）之個人出缺席與校安轉診紀錄快照。");
+    showRetroAlert("登入成功", "已調出學號 2032（林以安）之個人出缺席與校安轉診紀錄快照，健康中心封存月報已解除鎖定。");
     renderCurrentPage();
   } else {
     showRetroAlert("驗證失敗", "學號或出生月日（MMDD）與學籍資料庫不符。", true);
@@ -2171,8 +2186,8 @@ function renderSearchResultsPage(container) {
 
   const matchedDocs = Object.values(DOCUMENTS).filter(d => {
     if ((d.minStage || 1) > gameState.stage) return false;
-    // 屬於 /temp_old/ 的檔案，必須先透過假網址造訪該目錄後才可被索引檢索
     if (d.requiresTempDir && !gameState.puzzles.tempDirVisited) return false;
+    if (d.requiresPortal && !gameState.puzzles.studentPortalOpen) return false;
     const hay = (d.filename + d.title + d.author + d.content).toLowerCase();
     return hay.includes(qLower);
   });
@@ -2186,7 +2201,6 @@ function renderSearchResultsPage(container) {
     </table>
   `;
 }
-
 // ============================================================================
 // ★ 震撼雙結局觸發引擎 ★
 // ============================================================================
